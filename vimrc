@@ -28,6 +28,13 @@ set autoindent
 "Bracket auto complete"
 inoremap { {<CR>}<Esc>O<TAB>
 
+"Auto complete comment
+inoremap /*          /**/<Left><Left>
+inoremap /*<Space>   /*<Space><Space>*/<Left><Left><Left>
+inoremap /*<CR>      /*<CR>*/<Esc>O
+inoremap <Leader>/*  /*
+
+
 "Highlight current line"
 set cul
 hi CursorLine term=none cterm=none ctermbg=0
@@ -40,6 +47,9 @@ set clipboard+=unnamedplus
 
 "Toggle the NERD Tree
 map <C-n> :NERDTreeToggle<CR>
+
+"Auto comment and uncomment line
+inoremap cc "0 A //"
 
 "Html and XML auto close tags
 ":source ~/.vim/closetag.vim
