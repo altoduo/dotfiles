@@ -1,5 +1,5 @@
 ################################
-# Jamshed Vesuna's BashRC File #
+#    AwesomeRC's BashRC File   #
 ################################
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
