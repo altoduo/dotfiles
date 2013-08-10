@@ -93,13 +93,10 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-alias cs='cd ~/Dropbox/Berkeley/Spring\ 2013/CS61B/ && ls '
-alias quant='cd ~/Dropbox/Berkeley/Spring\ 2013/Quantitative\ Trading\ Decal/StockAnalysis && ls'
 alias cl='clear'
 alias ingen='cd ~/Dropbox/IngenCode/ && ls'
 alias shutoff='sudo shutdown now'
 alias k='cd .. && ls'
-alias webdev='cd ~/../../opt/lampstack-5.3.15-0/apps/wordpress/htdocs/wp-content/themes/u-design-child/ && ls'
 alias add='git add'
 alias com='git commit'
 alias push="git pull origin master && git push origin master"
