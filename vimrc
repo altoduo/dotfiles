@@ -1,4 +1,11 @@
-set wildmode=longest:full
+
+"Html and XML auto close tags
+":source ~/.vim/closetag.vim
+":imap <C-x> <C-_>
+
+"Set spell check"
+"set spell!
+
 set wildmenu
 
 "Auto Complete"
@@ -57,12 +64,7 @@ set clipboard+=unnamedplus
 map <C-n> :NERDTreeToggle<CR>
 
 "Auto comment and uncomment line
-inoremap cc "0 A //"
-
-"Html and XML auto close tags
-":source ~/.vim/closetag.vim
-":imap <C-x> <C-_>
+map <C-c> mc<bar>0<bar>i//<Esc>`c i
 
 "Set spell check"
 "set spell!
-
