@@ -34,6 +34,14 @@ inoremap /*<Space>   /*<Space><Space>*/<Left><Left><Left>
 inoremap /*<CR>      /*<CR>*/<Esc>O
 inoremap <Leader>/*  /*
 
+"Auto complete double quotes
+inoremap "      ""<Left>
+
+"Auto complete single quotes
+inoremap '    ''<Left>
+
+"Autocomplete Carrots
+inoremap <     <><Left>
 
 "Highlight current line"
 set cul
