@@ -50,6 +50,12 @@ inoremap '    ''<Left>
 "Autocomplete Carrots
 inoremap <     <><Left>
 
+"Autocomplete parenthesis
+inoremap (     ()<Left>
+
+"Search and replace visually selcted text with <Crt-r> (y/n)
+vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
+
 "Highlight current line"
 set cul
 hi CursorLine term=none cterm=none ctermbg=0
