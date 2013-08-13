@@ -26,10 +26,22 @@ inoremap "    ""<Left>
 inoremap '    ''<Left>
 inoremap <    <><Left>
 inoremap (    ()<Left>
+inoremap [    []<Left>
 "inoremap {    {}<Left>
 
 "Auto comment and uncomment line
-map <C-c> mc<bar>0<bar>i//<Esc>`c i
+function! Toggle_Comment()
+  let comment = '//'
+  if strpart(getline('.'), 0, 2) == comment
+    echo 'Removing comment'
+    execute ':normal mc|0|xx|`c'
+  else
+    echo 'Adding comment'
+    execute ':normal mc|0|i' . comment
+    execute ':normal! `c'
+  endif
+endfunction
+map <C-c> :call Toggle_Comment()<CR>
 
 "Search and replace visually selcted text with <Crt-r> (y/n)
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
