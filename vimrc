@@ -1,22 +1,9 @@
-
-"Html and XML auto close tags
-":source ~/.vim/closetag.vim
-":imap <C-x> <C-_>
-
-"Set spell check"
-"set spell!
+""""""""""""""""""""""""""""""""""""""""""""
+"               AwesomeRC                  "
+" git@github.com:DepthDeluxe/AwesomeRC.git "
+""""""""""""""""""""""""""""""""""""""""""""
 
 set wildmenu
-
-"Auto Complete"
-function! Tab_Or_Complete()
-  if col('.')>1 && strpart( getline('.'), col('.')-2, 3 ) =~ '^\w'
-    return "\<C-N>"
-  else
-    return "\<Tab>"
-  endif
-endfunction
-
 inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
 
 "Set line numbers"
@@ -34,24 +21,15 @@ set autoindent
 
 "Bracket auto complete"
 inoremap { {<CR>}<Esc>O<TAB>
-
-"Auto complete comment
-inoremap /*          /**/<Left><Left>
-inoremap /*<Space>   /*<Space><Space>*/<Left><Left><Left>
-inoremap /*<CR>      /*<CR>*/<Esc>O
-inoremap <Leader>/*  /*
-
-"Auto complete double quotes
-inoremap "      ""<Left>
-
-"Auto complete single quotes
+inoremap /*   /**/<Left><Left>
+inoremap "    ""<Left>
 inoremap '    ''<Left>
+inoremap <    <><Left>
+inoremap (    ()<Left>
+"inoremap {    {}<Left>
 
-"Autocomplete Carrots
-inoremap <     <><Left>
-
-"Autocomplete parenthesis
-inoremap (     ()<Left>
+"Auto comment and uncomment line
+map <C-c> mc<bar>0<bar>i//<Esc>`c i
 
 "Search and replace visually selcted text with <Crt-r> (y/n)
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
@@ -66,11 +44,18 @@ syntax on
 "Share clipboard with the system
 set clipboard+=unnamedplus 
 
+"Auto Complete"
+function! Tab_Or_Complete()
+  if col('.')>1 && strpart( getline('.'), col('.')-2, 3 ) =~ '^\w'
+    return "\<C-N>"
+  else
+    return "\<Tab>"
+  endif
+endfunction
+
 "Toggle the NERD Tree
 map <C-n> :NERDTreeToggle<CR>
 
-"Auto comment and uncomment line
-map <C-c> mc<bar>0<bar>i//<Esc>`c i
-
-"Set spell check"
+""""""""""""""""
+"Set spell check
 "set spell!
