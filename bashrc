@@ -112,6 +112,20 @@ goto () {
      cd "$(locate -i "$@" | grep -P $PLACE$USER$REST | awk '{print length(), $0 | "sort -n" }' | head -n 1 | cut -d " " -f2-)"; 
 }
 
+#SSH into Rasberry Pi with unknown IP address
+rpi () {
+      T="$(date +%s)"
+      echo "Testing IP Adresses..."
+      ACTIVEIPS=$(nmap -sP 192.168.1.1-255 | grep 'Nmap scan report for' | awk '{ print $5 }')
+      echo "Testing valid SSH servers..."
+      for ip in $ACTIVEIPS; do
+          echo "Time in seconds: $(($(date +%s)-T))"
+          echo "Time in seconds: ${T}"
+          echo "pi@$ip"
+          eval "ssh pi@$ip"
+      done
+}
+
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
