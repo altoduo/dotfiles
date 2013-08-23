@@ -53,14 +53,14 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-if [ "$color_prompt" = yes ]; then
+#if [ "$color_prompt" = yes ]; then
     #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-    PS1='\[\e[0;32m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[m\] \[\e[1;37m\]'
+#    PS1='\[\e[0;32m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[m\] \[\e[1;37m\]'
 
-else
+#else
     #PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-    PS1='\[\e[0;32m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[m\] \[\e[1;37m\]'
-fi
+#    PS1='\[\e[0;32m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[m\] \[\e[1;37m\]'
+#fi
 unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
@@ -91,16 +91,22 @@ alias sudo='sudo '
 # ls aliases
 alias ll='ls -lhF'
 alias lla='ll -a'
-alias la='ls -A'
+alias la='ls -a'
 alias l='ls -CF'
-alias cl='clear'
-alias shutoff='sudo shutdown now'
 alias k='cd .. && ls'
 
 # git aliases
 alias add='git add'
 alias com='git commit'
 alias push="git pull origin master && git push origin master"
+
+# etc aids
+alias cl='clear'
+alias shutoff='sudo shutdown now'
+
+#
+# Functions
+#
 
 # changes directory and lists the content inside
 function cdl () {
