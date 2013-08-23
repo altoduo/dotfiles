@@ -136,6 +136,12 @@ rpi () {
       done
 }
 
+# synchronizes git folder with specified upstream and branch
+sync () {
+	git pull $1 $2
+	git push $1 $2
+}
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
