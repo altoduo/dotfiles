@@ -84,6 +84,10 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
+# most important alias: sudo
+# this allows all aliases to be used with sudo
+alias sudo='sudo '
+
 # ls aliases
 alias ll='ls -lhF'
 alias lla='ll -a'
