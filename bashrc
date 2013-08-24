@@ -118,9 +118,9 @@ function cdl () {
 #goto *any folder* Added support for any computer user
 goto () {
      USER=$(whoami)
-     PLACE="/home/"
-     REST="/(Dropbox|Documents|Downloads|Desktop)"
-     cd "$(locate -i "$@" | grep -P $PLACE$USER$REST | awk '{print length(), $0 | "sort -n" }' | head -n 1 | cut -d " " -f2-)"; 
+     PLACE="/home"
+     #REST="(dropbox|documents|downloads|desktop)"
+     cd "$(locate -i "$@" | grep -P $PLACE/$USER | awk '{print length(), $0 | "sort -n" }' | head -n 1 | cut -d " " -f2-)"; 
 }
 
 #SSH into Rasberry Pi with unknown IP address
