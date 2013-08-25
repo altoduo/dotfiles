@@ -98,7 +98,6 @@ alias k='cd .. && ls'
 # git aliases
 alias add='git add'
 alias com='git commit'
-alias push="sync origin master"		# now compatible with new function
 
 # etc aids
 alias cl='clear'
