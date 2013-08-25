@@ -98,7 +98,6 @@ alias k='cd .. && ls'
 # git aliases
 alias add='git add'
 alias com='git commit'
-#alias push="git pull origin master && git push origin master"
 alias push="sync origin master"		# now compatible with new function
 
 # etc aids
@@ -117,10 +116,11 @@ function cdl () {
 
 #goto *any folder* Added support for any computer user
 goto () {
-     USER=$(whoami)
-     PLACE="/home"
-     #REST="(dropbox|documents|downloads|desktop)"
-     cd "$(locate -i "$@" | grep -P $PLACE/$USER | awk '{print length(), $0 | "sort -n" }' | head -n 1 | cut -d " " -f2-)"; 
+     # update the database
+     updatedb -l 0 -U ~/ -o ~/.cache/goto.db 
+     
+     # and then search it
+     cd "$(locate -d ~/.cache/goto.db -i "$@" | awk '{print length(), $0 | "sort -n" }' | head -n 1 | cut -d " " -f2)";
 }
 
 #SSH into Rasberry Pi with unknown IP address
