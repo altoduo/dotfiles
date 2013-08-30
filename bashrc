@@ -115,8 +115,11 @@ function cdl () {
 
 #goto *any folder* Added support for any computer user
 goto () {
+     # don't include opt and usr folders in the locate database
+     PRNAMES="opt usr"
+
      # update the database
-     updatedb -l 0 -U ~/ -o ~/.cache/goto.db 
+     updatedb --prunenames="$PRNAMES" -l 0 -U ~/ -o ~/.cache/goto.db 
      
      # and then search it
      cd "$(locate -d ~/.cache/goto.db -i "$@" | awk '{print length(), $0 | "sort -n" }' | head -n 1 | cut -d " " -f2)";
