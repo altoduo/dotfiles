@@ -137,6 +137,7 @@ rpi () {
           echo "pi@$ip"
           eval "ssh pi@$ip"
       done
+      echo "Connection Failed"
 }
 
 # synchronizes git folder with specified upstream and branch
