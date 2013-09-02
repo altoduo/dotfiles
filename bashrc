@@ -88,6 +88,10 @@ fi
 # this allows all aliases to be used with sudo
 alias sudo='sudo '
 
+# general aliases
+alias bashrc='vim ~/.bashrc'
+alias vimrc='vim ~/.vimrc'
+
 # ls aliases
 alias ll='ls -lhF'
 alias lla='ll -a'
