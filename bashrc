@@ -148,3 +148,9 @@ sync () {
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
+
+# Sublime shortcut.  Redirects all console output to /dev/null to
+# remove the plethora of annoying errors it prodoces
+if [ -d /opt/Sublime\ Text\ 2 ]; then
+	alias sublime='/opt/Sublime\ Text\ 2/sublime_text &> /dev/null'
+fi
