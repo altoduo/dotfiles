@@ -5,7 +5,7 @@
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
 # add scripts directory to path
-if [ -d "~/scripts" ]; then
+if [ -L "~/scripts" ]; then
 	PATH="$HOME/scripts:$PATH"
 fi
 
