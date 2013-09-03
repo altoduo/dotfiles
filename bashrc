@@ -94,6 +94,7 @@ alias k='cd .. && ls'
 # git aliases
 alias add='git add'
 alias com='git commit'
+alias push='git pull orgin master && git push origin master'
 
 # etc aids
 alias cl='clear'
