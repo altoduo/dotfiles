@@ -122,21 +122,6 @@ goto () {
      cd "$(locate -d ~/.cache/goto.db -i "$@" | awk '{print length(), $0 | "sort -n" }' | head -n 1 | cut -d " " -f2)";
 }
 
-#SSH into Rasberry Pi with unknown IP address
-rpi () {
-      T="$(date +%s)"
-      echo "Testing IP Adresses..."
-      ACTIVEIPS=$(nmap -sP 192.168.1.1-255 | grep 'Nmap scan report for' | awk '{ print $5 }')
-      echo "Testing valid SSH servers..."
-      for ip in $ACTIVEIPS; do
-          echo "Time in seconds: $(($(date +%s)-T))"
-          echo "Time in seconds: ${T}"
-          echo "pi@$ip"
-          eval "ssh pi@$ip"
-      done
-      echo "Connection Failed"
-}
-
 # synchronizes git folder with specified upstream and branch
 sync () {
 	git pull $1 $2
