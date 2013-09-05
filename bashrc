@@ -128,6 +128,11 @@ sync () {
 	git push $1 $2
 }
 
+# start splunk and splunk web
+function start-splunk() {
+  cd /opt/splunk/bin/
+  sudo ./splunk start
+}
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
