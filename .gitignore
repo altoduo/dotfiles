@@ -1,2 +1,22 @@
-# all python cache folders
+# All Python Cache Folders
 __pycache__
+
+
+# Swap and Temporary Files
+*.swp
+
+# Compiled Sources
+*.o
+*.exe
+
+# Packages
+*.tar
+*.jar
+*.rar
+*.gz
+*.iso
+*.zip
+
+# Logs
+*.log
+*.sql
