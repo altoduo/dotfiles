@@ -65,6 +65,10 @@ function! Tab_Or_Complete()
   endif
 endfunction
 
+"Display the file name at the bottom
+set modeline
+set ls=2
+
 "Toggle the NERD Tree
 map <C-n> :NERDTreeToggle<CR>
 
