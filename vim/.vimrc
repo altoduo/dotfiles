@@ -21,12 +21,12 @@ set autoindent
 
 "Bracket auto complete"
 inoremap { {<CR>}<Esc>O<TAB>
-inoremap /*   /**/<Left><Left>
-inoremap "    ""<Left>
-inoremap '    ''<Left>
-inoremap <    <><Left>
-inoremap (    ()<Left>
-inoremap [    []<Left>
+"inoremap /*   /**/<Left><Left>
+"inoremap "    ""<Left>
+"inoremap '    ''<Left>
+"inoremap <    <><Left>
+"inoremap (    ()<Left>
+"inoremap [    []<Left>
 "inoremap {    {}<Left>
 
 "Auto comment and uncomment line
@@ -48,7 +48,7 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
 "Highlight current line"
 set cul
-"hi CursorLine term=none cterm=none ctermbg=0
+hi CursorLine term=none cterm=none ctermbg=0
 
 "Set syntax highlighting on"
 syntax on
@@ -71,8 +71,6 @@ set ls=2
 
 "Toggle the NERD Tree
 map <C-n> :NERDTreeToggle<CR>
-
-color github
 
 """"""""""""""""
 "Set spell check
