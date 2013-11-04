@@ -19,7 +19,7 @@ set shiftwidth=2
 set smarttab
 set autoindent
 
-"Bracket auto complete"
+"Bracket auto complete
 inoremap { {<CR>}<Esc>O<TAB>
 "inoremap /*   /**/<Left><Left>
 "inoremap "    ""<Left>
