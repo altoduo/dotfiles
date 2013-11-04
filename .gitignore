@@ -4,6 +4,7 @@ __pycache__
 
 # Swap and Temporary Files
 *.swp
+*.!sync
 
 # Compiled Sources
 *.o
