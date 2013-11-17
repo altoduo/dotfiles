@@ -72,6 +72,9 @@ set ls=2
 "Toggle the NERD Tree
 map <C-n> :NERDTreeToggle<CR>
 
+"Set color scheme
+colorscheme github
+
 """"""""""""""""
 "Set spell check
 "set spell!
