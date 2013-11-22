@@ -75,6 +75,9 @@ map <C-n> :NERDTreeToggle<CR>
 "Set color scheme
 colorscheme github
 
+"Run Pathogen Plugin Manager on Startup
+execute pathogen#infect()
+
 """"""""""""""""
 "Set spell check
 "set spell!
