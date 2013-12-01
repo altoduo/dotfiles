@@ -35,6 +35,9 @@ colorscheme github
 "Share clipboard with the system
 set clipboard+=unnamedplus
 
+"In VM Control-R to prompt replacement text
+vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
+
 """ PLUGINS and HOTKEYS """
 
 "Run Pathogen Plugin Manager on Startup
