@@ -70,10 +70,23 @@ endfunction
 
 "Auto comment and uncomment line
 function! Toggle_Comment()
-  let comment = '//'
-  if strpart(getline('.'), 0, 2) == comment
+  "Define comment based on filetype
+  let my_filetype = &filetype
+  if my_filetype == 'python'
+    let comment = '#'
+  else
+    let comment = '//'
+  endif
+  let comLen = len(comment)
+  let comRemove = 'x'
+  let k = 1
+  while k < comLen
+    let comRemove = comRemove . 'x'
+    let k += 1
+  endwhile
+  if strpart(getline('.'), 0, comLen) == comment
     echo 'Removing comment'
-    execute ':normal mc|0|xx|`c'
+    execute ':normal mc|0|' . comRemove .'|`c'
   else
     echo 'Adding comment'
     execute ':normal mc|0|i' . comment
