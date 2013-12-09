@@ -17,11 +17,15 @@ set smarttab
 set autoindent
 
 "Current Line Visuals (Highlighting)
-"set cul
+"set cul (Sets underline)
 "hi CursorLine term=none cterm=none ctermbg=0
 
 "Set syntax highlighting on"
 syntax on
+
+"Set search highlighting
+set hlsearch
+set incsearch
 
 "Display the file name at the bottom
 set modeline
