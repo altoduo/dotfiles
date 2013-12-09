@@ -99,6 +99,8 @@ alias pull='git pull'
 
 # program aliases
 alias p='python'
+alias c='gcc'
+alias j='java'
 
 # etc aids
 alias cl='clear'
