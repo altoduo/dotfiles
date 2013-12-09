@@ -97,6 +97,9 @@ alias commit='git commit'
 alias push='git push'
 alias pull='git pull'
 
+# program aliases
+alias p='python'
+
 # etc aids
 alias cl='clear'
 alias shutoff='sudo shutdown now'
