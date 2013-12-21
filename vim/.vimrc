@@ -99,5 +99,17 @@ function! Toggle_Comment()
 endfunction
 map <C-c> :call Toggle_Comment()<CR>
 
+"Shortcut for changing vertical window size
+function! Bigger_V_Window()
+  :vertical resize +2
+endfunction
+
+function! Smaller_V_Window()
+  :vertical resize -2
+endfunction
+
+map <F3> :call Bigger_V_Window()<CR>
+map <F2> :call Smaller_V_Window()<CR>
+
 set wildmenu
 inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
