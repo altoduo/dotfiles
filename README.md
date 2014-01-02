@@ -10,6 +10,10 @@ The RC files for commonly used linux applications include:
 1. Bash
 2. Vim
 
+Other applications include:
+
+1. Splunk
+
 These files include hot key shortcuts, color schemes, functions for various purposes.
 
 Scripts
