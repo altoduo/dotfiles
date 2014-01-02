@@ -12,7 +12,7 @@ The RC files for commonly used linux applications include:
 
 Other applications include:
 
-1. Splunk
+1. [Splunk](http://splunk.com)
 
 These files include hot key shortcuts, color schemes, functions for various purposes.
 
