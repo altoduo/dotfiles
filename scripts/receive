@@ -1,4 +1,9 @@
 #!/bin/bash
 
+if [ "$1" == "" ]; then
+    echo "Please enter for netcat to save to"
+    exit
+fi
+
 port=52377
-netcat -l -p $port
+netcat -l -p $port > $1

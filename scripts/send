@@ -1,13 +1,13 @@
 #!/bin/bash
 
-if [ $1 -eq "" ]; then
+if [ "$1" == "" ]; then
     echo "Please specify a host to send to"
     exit
 fi
-if [ $2 -eq "" ]; then
+if [ "$2" == "" ]; then
     echo "Please specify a file to send"
     exit
 fi
 
 port="52377"
-cat $2 | netcat localhost $port
+cat $2 | netcat -c localhost $port
