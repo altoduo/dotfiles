@@ -1,0 +1,4 @@
+#!/bin/bash
+
+port=52377
+netcat -l -p $port
