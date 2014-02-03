@@ -3,11 +3,28 @@
 " git@github.com:DepthDeluxe/AwesomeRC.git "
 """"""""""""""""""""""""""""""""""""""""""""
 
+"=========================
+"         Misc.
+"=========================
+
 "Set line numbers"
 set number
 
 "Mappings
 nnoremap ; :
+
+"Bracket auto complete
+let my_filetype = &filetype "Needs fix
+if my_filetype == 'java'
+    inoremap { {<CR>}<Esc>O<TAB>
+endif
+"inoremap /*   /**/<Left><Left>
+"inoremap "    ""<Left>
+"inoremap '    ''<Left>
+"inoremap <    <><Left>
+"inoremap (    ()<Left>
+"inoremap [    []<Left>
+"inoremap {    {}<Left>
 
 "Tabbing and Indenting
 set tabstop=4
@@ -15,6 +32,19 @@ set expandtab
 set shiftwidth=4
 set smarttab
 set autoindent
+
+"Copy/Paste integration with system
+set clipboard=unnamed
+
+"F5 past toggle
+set pastetoggle=<F5>
+
+"Automatic reloading of .vimrc
+autocmd! bufwritepost .vimrc source %
+
+"=========================
+"         Colors
+"=========================
 
 "Current Line Visuals (Highlighting)
 "set cul (Sets underline)
@@ -39,29 +69,25 @@ colorscheme github
 "Share clipboard with the system
 set clipboard+=unnamedplus
 
-"In VM Control-R to prompt replacement text
-vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
-
-""" PLUGINS and HOTKEYS """
+"=========================
+"   Plugins and Hotkeys
+"=========================
 
 "Run Pathogen Plugin Manager on Startup
 execute pathogen#infect()
-
-"Bracket auto complete
-inoremap { {<CR>}<Esc>O<TAB>
-"inoremap /*   /**/<Left><Left>
-"inoremap "    ""<Left>
-"inoremap '    ''<Left>
-"inoremap <    <><Left>
-"inoremap (    ()<Left>
-"inoremap [    []<Left>
-"inoremap {    {}<Left>
 
 "Toggle the NERD Tree
 map <C-n> :NERDTreeToggle<CR>
 
 "Search and replace visually selcted text with <Crt-r> (y/n)
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
+
+"In Visual Mode Control-R to prompt replacement text
+vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
+
+"=========================
+"       Functions
+"=========================
 
 "Auto Complete"
 function! Tab_Or_Complete()
