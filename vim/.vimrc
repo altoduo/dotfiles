@@ -98,33 +98,6 @@ function! Tab_Or_Complete()
   endif
 endfunction
 
-"Auto comment and uncomment line
-function! Toggle_Comment()
-  "Define comment based on filetype
-  let my_filetype = &filetype
-  if my_filetype == 'python'
-    let comment = '#'
-  else
-    let comment = '//'
-  endif
-  let comLen = len(comment)
-  let comRemove = 'x'
-  let k = 1
-  while k < comLen
-    let comRemove = comRemove . 'x'
-    let k += 1
-  endwhile
-  if strpart(getline('.'), 0, comLen) == comment
-    echo 'Removing comment'
-    execute ':normal mc|0|' . comRemove .'|`c'
-  else
-    echo 'Adding comment'
-    execute ':normal mc|0|i' . comment
-    execute ':normal! `c'
-  endif
-endfunction
-map <C-c> :call Toggle_Comment()<CR>
-
 "Shortcut for changing vertical window size
 function! Bigger_V_Window()
   :vertical resize +2
