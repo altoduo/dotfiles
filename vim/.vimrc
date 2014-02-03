@@ -79,6 +79,9 @@ execute pathogen#infect()
 "Toggle the NERD Tree
 map <C-n> :NERDTreeToggle<CR>
 
+"Auto-comment
+map <C-c> :call Toggle_Comment()<CR>
+
 "Search and replace visually selcted text with <Crt-r> (y/n)
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
