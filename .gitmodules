@@ -7,3 +7,6 @@
 [submodule "vim/.vim/bundle/python-mode"]
 	path = vim/.vim/bundle/python-mode
 	url = https://github.com/klen/python-mode.git
+[submodule "vim/.vim/bundle/auto-comment"]
+	path = vim/.vim/bundle/auto-comment
+	url = git@github.com:JamshedVesuna/auto-comment.git
