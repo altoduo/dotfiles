@@ -29,3 +29,11 @@ Projects are created by running the `create-project.sh` script which is located 
 ```sh
 create-project.sh $PROJECT_NAME $NEW_PROJECT_PATH
 ```
+
+Installation
+------------
+
+1. Clone into any prefered directory
+2. Update all submodules: git submodule update --init --recursive
+3. Pull all submodules: git submodule foreach git pull
+4. Recommended: Make a symlink (ln -s) to RC directories into your home folder (~/)
