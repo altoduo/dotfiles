@@ -85,18 +85,21 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 "In Visual Mode Control-R to prompt replacement text
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
+"UCompleteMe
+call ucompleteme#Setup()
+
 "=========================
 "       Functions
 "=========================
 
 "Auto Complete"
-function! Tab_Or_Complete()
-  if col('.')>1 && strpart( getline('.'), col('.')-2, 3 ) =~ '^\w'
-    return "\<C-N>"
-  else
-    return "\<Tab>"
-  endif
-endfunction
+"function! Tab_Or_Complete()
+"  if col('.')>1 && strpart( getline('.'), col('.')-2, 3 ) =~ '^\w'
+"    return "\<C-N>"
+"  else
+"    return "\<Tab>"
+"  endif
+"endfunction
 
 "Shortcut for changing vertical window size
 function! Bigger_V_Window()
