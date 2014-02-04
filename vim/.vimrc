@@ -14,10 +14,7 @@ set number
 nnoremap ; :
 
 "Bracket auto complete
-let my_filetype = &filetype "Needs fix
-if my_filetype == 'java'
-    inoremap { {<CR>}<Esc>O<TAB>
-endif
+inoremap {<Enter> {<CR>.<CR>}<Esc>ki<TAB><DEL>
 "inoremap /*   /**/<Left><Left>
 "inoremap "    ""<Left>
 "inoremap '    ''<Left>
@@ -65,9 +62,6 @@ set ls=2
 syntax enable
 set background=light
 colorscheme github
-
-"Share clipboard with the system
-set clipboard+=unnamedplus
 
 "=========================
 "   Plugins and Hotkeys
