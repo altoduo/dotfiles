@@ -39,12 +39,15 @@ set pastetoggle=<F5>
 "Automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
 
+"Adds '-' to one word autocomplete
+set iskeyword+=-
+
 "=========================
 "         Colors
 "=========================
 
 "Current Line Visuals (Highlighting)
-"set cul (Sets underline)
+"set cul
 "hi CursorLine term=none cterm=none ctermbg=0
 
 "Set syntax highlighting on"
@@ -55,8 +58,8 @@ set hlsearch
 set incsearch
 
 "Display the file name at the bottom
-set modeline
-set ls=2
+"set modeline
+"set ls=2
 
 "Set color scheme
 syntax enable
