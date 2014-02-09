@@ -42,6 +42,15 @@ autocmd! bufwritepost .vimrc source %
 "Adds '-' to one word autocomplete
 set iskeyword+=-
 
+"Display endline whitespace
+set listchars=trail:.
+set list
+
+"Place vim temp files somewhere else
+silent !mkdir -p ~/.vim/backup ~/.vim/swap
+set backupdir=~/.vim/backup//
+set directory=~/.vim/swap//
+
 "=========================
 "         Colors
 "=========================
