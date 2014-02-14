@@ -10,3 +10,6 @@
 [submodule "vim/.vim/bundle/auto-comment"]
 	path = vim/.vim/bundle/auto-comment
 	url = git@github.com:JamshedVesuna/auto-comment.git
+[submodule "vim/.vim/bundle/vmath"]
+	path = vim/.vim/bundle/vmath
+	url = https://github.com/gavinbeatty/vmath.vim.git

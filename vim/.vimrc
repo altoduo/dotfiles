@@ -51,6 +51,9 @@ silent !mkdir -p ~/.vim/backup ~/.vim/swap
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swap//
 
+"Vim marks available after file close, remain in buffer
+set viminfo='1000,f1
+
 "=========================
 "         Colors
 "=========================
