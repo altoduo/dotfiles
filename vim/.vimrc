@@ -97,6 +97,8 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 "In Visual Mode Control-R to prompt replacement text
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
+"Deselect search highlighting
+map <Leader><Space> :noh<CR>
 "=========================
 "       Functions
 "=========================
