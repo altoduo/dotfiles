@@ -29,6 +29,7 @@ set expandtab
 set shiftwidth=4
 set smarttab
 set autoindent
+set softtabstop=4
 
 "Copy/Paste integration with system
 set clipboard=unnamed
