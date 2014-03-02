@@ -127,3 +127,12 @@ map <F2> :call Smaller_V_Window()<CR>
 
 set wildmenu
 inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
+
+
+"=========================
+"       Experimental
+"=========================
+
+"Keep the cursor in the center of the screen
+map <Up> <Up>zz
+map <Down> <Down>zz
