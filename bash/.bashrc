@@ -90,6 +90,7 @@ alias lla='ll -a'
 alias la='ls -a'
 alias l='ls -CF'
 alias k='cd .. && ls'
+alias pj='cd ~/Dropbox/Berkeley/Spring\ 2014/CS\ 188/Project4'
 
 # git aliases
 alias add='git add'
@@ -123,11 +124,13 @@ goto () {
 
      # update the database
      updatedb --prunenames="$PRNAMES" -l 0 -U ~/ -o ~/.cache/goto.db 
-     
+
      # and then search it
      cd "$(locate -d ~/.cache/goto.db -i "$@" | awk '{print length(), $0 | "sort -n" }' | head -n 1 | cut -d " " -f2)";
 }
 
+#Make directory and cd into it
+mcd () { mkdir "$1" && cd "$1"; }
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
