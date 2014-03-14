@@ -125,6 +125,17 @@ endfunction
 map <F3> :call Bigger_V_Window()<CR>
 map <F2> :call Smaller_V_Window()<CR>
 
+function! Shift_Left()
+    execute ':normal 0|v|$|<'
+endfunction
+
+function! Shift_Right()
+    execute ':normal 0|v|$|>'
+endfunction
+
+map <F6> :call Shift_Left()<CR>
+map <F7> :call Shift_Right()<CR>
+
 set wildmenu
 inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
 
@@ -134,5 +145,5 @@ inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
 "=========================
 
 "Keep the cursor in the center of the screen
-map <Up> <Up>zz
-map <Down> <Down>zz
+"map <Up> <Up>zz
+"map <Down> <Down>zz
