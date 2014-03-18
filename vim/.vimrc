@@ -77,7 +77,7 @@ set incsearch
 "Set color scheme
 syntax enable
 set background=light
-colorscheme github
+colorscheme solarized
 
 "=========================
 "   Plugins and Hotkeys
