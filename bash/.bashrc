@@ -89,7 +89,7 @@ alias ll='ls -lhF'
 alias lla='ll -a'
 alias la='ls -a'
 alias l='ls -CF'
-alias k='cd .. && ls'
+alias k='cd .. && l'
 alias pj='cd ~/Dropbox/Berkeley/Spring\ 2014/CS\ 188/Project4'
 
 # git aliases
