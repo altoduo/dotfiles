@@ -1,15 +1,18 @@
 [global_config]
+  custom_url_handler = google-chrome-stable
   title_hide_sizetext = True
-  title_transmit_bg_color = "#d30102"
   focus = system
+  use_custom_url_handler = True
+  title_transmit_bg_color = "#d30102"
   inactive_color_offset = 1.2
+  always_split_with_profile = True
 [keybindings]
 [profiles]
   [[default]]
     background_image = None
+    font = Sans 14
     show_titlebar = False
   [[solarized-dark]]
-    //scrollbar_position = hidden
     palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
     background_image = None
     cursor_color = "#eee8d5"
@@ -19,11 +22,12 @@
   [[solarized-light]]
     palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
     background_image = None
+    use_system_font = False
     cursor_color = "#002b36"
     foreground_color = "#002b36"
     show_titlebar = False
+    font = Monospace 12
     background_color = "#eee8d5"
-    //scrollbar_position = hidden
 [layouts]
   [[default]]
     [[[child1]]]
@@ -33,26 +37,5 @@
     [[[window0]]]
       type = Window
       parent = ""
-  [[New Layout]]
-    [[[child0]]]
-      position = 0:0
-      type = Window
-      order = 0
-      parent = ""
-      size = 1366, 624
-    [[[child1]]]
-      labels = None, None
-      type = Notebook
-      order = 0
-      parent = child0
-    [[[terminal3]]]
-      profile = solarized-light
-      type = Terminal
-      order = 1
-      parent = child1
-    [[[terminal2]]]
-      profile = solarized-light
-      type = Terminal
-      order = 0
-      parent = child1
+      size = 750, 450
 [plugins]
