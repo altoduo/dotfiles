@@ -1,11 +1,11 @@
 [global_config]
   custom_url_handler = google-chrome-stable
   title_hide_sizetext = True
+  always_split_with_profile = True
   focus = system
   use_custom_url_handler = True
   title_transmit_bg_color = "#d30102"
   inactive_color_offset = 1.2
-  always_split_with_profile = True
 [keybindings]
 [profiles]
   [[default]]
@@ -22,7 +22,6 @@
   [[solarized-light]]
     palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
     background_image = None
-    use_system_font = False
     cursor_color = "#002b36"
     foreground_color = "#002b36"
     show_titlebar = False
