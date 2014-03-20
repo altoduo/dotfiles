@@ -1,9 +1,11 @@
 [global_config]
+  handle_size = 0
   custom_url_handler = google-chrome-stable
   title_hide_sizetext = True
   always_split_with_profile = True
   focus = system
   use_custom_url_handler = True
+  suppress_multiple_term_dialog = True
   title_transmit_bg_color = "#d30102"
   inactive_color_offset = 1.2
 [keybindings]
@@ -11,15 +13,18 @@
   [[default]]
     background_image = None
     font = Sans 14
+    scrollbar_position = hidden
     show_titlebar = False
   [[solarized-dark]]
+    scrollbar_position = disabled
     palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
     background_image = None
     cursor_color = "#eee8d5"
     foreground_color = "#eee8d5"
     show_titlebar = False
-    background_color = "#002b36"
+    background_color = "#073642"
   [[solarized-light]]
+    scrollbar_position = disabled
     palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
     background_image = None
     cursor_color = "#002b36"
