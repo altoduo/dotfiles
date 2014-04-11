@@ -26,6 +26,7 @@ alias bashrc='vim ~/.bashrc'
 alias vimrc='vim ~/.vimrc'
 alias cl='clear'
 alias shutoff='sudo shutdown now'
+alias f='fg'
 
 # ls aliases
 alias ll='ls -lhF'
@@ -33,7 +34,6 @@ alias lla='ll -a'
 alias la='ls -a'
 alias l='ls -CF'
 alias k='cd .. && l'
-alias pj='cd ~/Dropbox/Berkeley/Spring\ 2014/CS\ 188/Project4'
 
 # git aliases
 alias add='git add'
