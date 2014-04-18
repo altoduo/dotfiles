@@ -14,7 +14,7 @@ set number
 nnoremap ; :
 
 "Bracket auto complete
-inoremap {<Enter> {<CR>.<CR>}<Esc>ki<TAB><DEL>
+"inoremap {<Enter> {<CR>.<CR>}<Esc>ki<TAB><DEL>
 "inoremap /*   /**/<Left><Left>
 "inoremap "    ""<Left>
 "inoremap '    ''<Left>
@@ -90,7 +90,7 @@ execute pathogen#infect()
 map <C-n> :NERDTreeToggle<CR>
 
 "Auto-comment
-map <C-c> :call Toggle_Comment()<CR>
+"map <C-c> :call Toggle_Comment()<CR>
 
 "Search and replace visually selcted text with <Crt-r> (y/n)
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
@@ -100,6 +100,10 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
 "Deselect search highlighting
 map <Leader><Space> :noh<CR>
+
+"<F9> to execute current buffer with python
+nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
+
 "=========================
 "       Functions
 "=========================
@@ -126,11 +130,13 @@ map <F3> :call Bigger_V_Window()<CR>
 map <F2> :call Smaller_V_Window()<CR>
 
 function! Shift_Left()
-    execute ':normal 0|v|$|<'
+    execute ':normal v|<'
+    "execute ':normal 0|v|$|<'
 endfunction
 
 function! Shift_Right()
-    execute ':normal 0|v|$|>'
+    execute ':normal v|>'
+    "execute ':normal 0|v|$|>'
 endfunction
 
 map <F6> :call Shift_Left()<CR>
