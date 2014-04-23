@@ -14,7 +14,7 @@ set number
 nnoremap ; :
 
 "Bracket auto complete
-"inoremap {<Enter> {<CR>.<CR>}<Esc>ki<TAB><DEL>
+inoremap {<Enter> {<CR>.<CR>}<Esc>ki<TAB><DEL>
 "inoremap /*   /**/<Left><Left>
 "inoremap "    ""<Left>
 "inoremap '    ''<Left>
@@ -90,7 +90,7 @@ execute pathogen#infect()
 map <C-n> :NERDTreeToggle<CR>
 
 "Auto-comment
-"map <C-c> :call Toggle_Comment()<CR>
+map <C-c> :call Toggle_Comment()<CR>
 
 "Search and replace visually selcted text with <Crt-r> (y/n)
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
