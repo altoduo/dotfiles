@@ -60,7 +60,7 @@ function cdl () {
 mcd () { mkdir "$1" && cd "$1"; }
 
 # Look in directory without cd into it
-peek () {
+pk () {
     cd $1
     la
     cd ..
