@@ -40,11 +40,13 @@ alias add='git add'
 alias commit='git commit'
 alias push='git push'
 alias pull='git pull'
+alias gpom='git push origin master'
 
 # Program aliases
 alias p='python'
 alias c='gcc'
 alias j='java'
+alias v='vim'
 
 #################
 #   Functions   #
