@@ -1,5 +1,0 @@
-#!/bin/bash
-
-# synchronizes git folder with specified upstream and branch
-git pull $1 $2
-git push $1 $2
