@@ -71,6 +71,7 @@ alias push='git push'
 alias pull='git pull'
 alias pullr='git pull -r'
 alias gpom='git push origin master'
+alias status='git status'
 
 # Program aliases
 alias p='python'
