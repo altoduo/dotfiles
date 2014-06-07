@@ -25,6 +25,7 @@ WHITE='\e[1;37m'
 YELLOW='\[\033[0;33m\]'
 
 # Prompt
+. /usr/share/git/git-prompt.sh      # import the interactive git prompt script
 export PS1="${BGREEN}\u ${BLUE}\w${YELLOW}\$(__git_ps1) ${RED}\$ ${NORMAL}"
 
 #################
