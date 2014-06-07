@@ -41,6 +41,8 @@ alias vimrc='vim ~/.vimrc'
 alias cl='clear'
 alias shutoff='sudo shutdown now'
 alias f='fg'
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
 
 # ls aliases
 alias ll='ls -lhFG'
@@ -80,6 +82,11 @@ pk () {
     cd $1
     la
     cd ..
+}
+
+# pbcopy made simple
+pbc () {
+    cat $1 | pbcopy
 }
 
 # goto *any folder* Added support for any computer user
