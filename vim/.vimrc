@@ -31,6 +31,11 @@ set smarttab
 set autoindent
 set softtabstop=4
 
+"Expand ^I and retab
+ if has("autocmd")
+    au BufReadPost * if &modifiable | retab | endif
+endif
+
 "Copy/Paste integration with system
 set clipboard=unnamed
 

@@ -2,7 +2,6 @@
 #    AwesomeRC's BashRC File   #
 ################################
 
-
 #################
 #    Colors     #
 #################
@@ -12,6 +11,21 @@
 
 # Colored prompt
 force_color_prompt=yes
+
+# Set Some Colors
+export TERM=xterm-256color
+BGREEN='\[\033[1;32m\]'
+GREEN='\e[0;32m'
+BRED='\[\033[1;31m\]'
+RED='\[\033[0;31m\]'
+BBLUE='\[\033[1;34m\]'
+BLUE='\[\033[0;34m\]'
+NORMAL='\[\033[00m\]'
+WHITE='\e[1;37m'
+YELLOW='\[\033[0;33m\]'
+
+# Prompt
+export PS1="${BGREEN}\u ${BLUE}\w${YELLOW}\$(__git_ps1) ${RED}\$ ${NORMAL}"
 
 #################
 #    Aliases    #
@@ -29,7 +43,7 @@ alias shutoff='sudo shutdown now'
 alias f='fg'
 
 # ls aliases
-alias ll='ls -lhF'
+alias ll='ls -lhFG'
 alias lla='ll -a'
 alias la='ls -a'
 alias l='ls -CF'
@@ -74,7 +88,7 @@ goto () {
      PRNAMES="opt usr"
 
      # update the database
-     updatedb --prunenames="$PRNAMES" -l 0 -U ~/ -o ~/.cache/goto.db 
+     updatedb --prunenames="$PRNAMES" -l 0 -U ~/ -o ~/.cache/goto.db
 
      # and then search it
      cd "$(locate -d ~/.cache/goto.db -i "$@" | awk '{print length(), $0 | "sort -n" }' | head -n 1 | cut -d " " -f2)";
@@ -111,10 +125,30 @@ esac
 # Dynamic line length based on window size
 shopt -s checkwinsize
 
+# Correct mistyped dir names
+shopt -s cdspell
+
+# Case-insensitive matching for filename results
+shopt -s nocaseglob
+
+#Set editor and visual variable
+set -o vi
+export EDITOR=vim
+
 # Sublime shortcut.  Redirects all console output to /dev/null to
 # remove the plethora of annoying errors it prodoces
 if [ -d /opt/Sublime\ Text\ 2 ]; then
   alias sublime='/opt/Sublime\ Text\ 2/sublime_text &> /dev/null'
+fi
+
+# HomeBrew Completion Files
+brew_bash_completion_dir='/usr/local/etc/bash_completion.d'
+if [ -d $brew_bash_completion_dir ]; then
+    for file in $brew_bash_completion_dir/*; do
+        if [[ -f "$file" ]]; then
+            source "$file"
+        fi
+    done
 fi
 
 #################
