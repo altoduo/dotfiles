@@ -12,8 +12,9 @@ The RC files for commonly used linux applications include:
 
 Other applications include:
 
-1. [Splunk](http://splunk.com)
-2. [Terminator](http://gnometerminator.blogspot.com/p/introduction.html)
+1. [Git](http://git-scm.com/)
+2. [Splunk](http://splunk.com)
+3. [Terminator](http://gnometerminator.blogspot.com/p/introduction.html)
 
 These files include hot key shortcuts, color schemes, functions for various purposes.
 
