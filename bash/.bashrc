@@ -25,6 +25,7 @@ WHITE='\e[1;37m'
 YELLOW='\[\033[0;33m\]'
 
 # Prompt
+. /usr/share/git/git-prompt.sh      # import the interactive git prompt script
 export PS1="${BGREEN}\u ${BLUE}\w${YELLOW}\$(__git_ps1) ${RED}\$ ${NORMAL}"
 
 #################
@@ -34,6 +35,18 @@ export PS1="${BGREEN}\u ${BLUE}\w${YELLOW}\$(__git_ps1) ${RED}\$ ${NORMAL}"
 # Most important alias: sudo
 # This allows all aliases to be used with sudo
 alias sudo='sudo '
+
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    #alias dir='dir --color=auto'
+    #alias vdir='vdir --color=auto'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
 
 # General aliases
 alias bashrc='vim ~/.bashrc'
@@ -56,7 +69,9 @@ alias add='git add'
 alias commit='git commit'
 alias push='git push'
 alias pull='git pull'
+alias pullr='git pull -r'
 alias gpom='git push origin master'
+alias status='git status'
 
 # Program aliases
 alias p='python'

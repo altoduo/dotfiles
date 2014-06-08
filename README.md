@@ -22,15 +22,6 @@ Scripts
 
 In addition to the configuration files we have accumulated some scripts to make life simpler.
 
-Templates
----------
-In the templates/ folder you will find templates that make creating new programming projects a lot easier.  These templates will contain premade Makefiles and various general configuration to save time.  Everything will be copied so you are free to edit the config files however you like.
-
-Projects are created by running the `create-project.sh` script which is located in the scripts/ folder.
-```sh
-create-project.sh $PROJECT_NAME $NEW_PROJECT_PATH
-```
-
 Installation
 ------------
 
