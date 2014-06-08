@@ -1,0 +1,26 @@
+[user]
+#    name =
+#    email =
+[push]
+    default = upstream
+[branch]
+    autosetuprebase = always
+[alias]
+    ci = commit
+    st = status
+    co = checkout
+    br = branch --color -av
+    rb = rebase
+    ls = log --stat
+    staged = diff --cached --color
+    graph = log --decorate --graph --all
+    hlog = log --date-order --all --graph --format=\"%C(green)%H%Creset %C(yellow)%an%Creset %C(blue bold)%ar%Creset %C(red bold)%d%Creset%s\"
+    d = diff --color-words
+[core]
+    pager = less -FrX --ignore-case
+[color]
+    diff = always
+    branch = auto
+    interactive = auto
+[credential]
+    helper = osxkeychain
