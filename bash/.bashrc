@@ -56,8 +56,8 @@ alias vimrc='vim ~/.vimrc'
 alias cl='clear'
 alias shutoff='sudo shutdown now'
 alias f='fg'
-alias pbcopy='xclip -selection clipboard'
-alias pbpaste='xclip -selection clipboard -o'
+alias xpbcopy='xclip -selection clipboard'
+alias xpbpaste='xclip -selection clipboard -o'
 
 # ls aliases
 alias ll='ls -lhFG'
