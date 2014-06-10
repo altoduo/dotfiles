@@ -106,6 +106,10 @@ pbc () {
     cat $1 | pbcopy
 }
 
+xpbc () {
+    cat $1 | xpbcopy
+}
+
 # goto *any folder* Added support for any computer user
 goto () {
      # don't include opt and usr folders in the locate database
