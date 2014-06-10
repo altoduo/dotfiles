@@ -119,8 +119,7 @@ goto () {
      updatedb --prunenames="$PRNAMES" -l 0 -U ~/ -o ~/.cache/goto.db
 
      # and then search it
-     #cd "$(locate -d ~/.cache/goto.db -i "$@" | awk '{print length(), $0 | "sort -n" }' | head -n 1 | cut -d " " -f2)";
-     cd "$(locate -d /usr/libexec/locate.updatedb -i "$@" | awk '{print length(), $0 | "sort -n" }' | head -n 1 | cut -d " " -f2)";
+     cd "$(locate -d ~/.cache/goto.db -i "$@" | awk '{print length(), $0 | "sort -n" }' | head -n 1 | cut -d " " -f2)";
 }
 
 #################
