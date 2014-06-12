@@ -82,7 +82,7 @@ alias j='java'
 alias v='vim'
 
 # MAC OS aliases
-if [ "$OS" = "Darwin" ]; then
+if [ "$(uname)" = "Darwin" ]; then
     FINDUTIL_DIR="/usr/local/Cellar/findutils/4.4.2/bin"
     alias locate="$FINDUTIL_DIR/glocate"
     alias updatedb="$FINDUTIL_DIR/gupdatedb"
@@ -117,9 +117,6 @@ xpbc () {
     cat $1 | xpbcopy
 }
 
-# keep track of OS for the goto function
-export OS=$(uname)
-
 # goto *any folder* Added support for any computer user
 goto () {
     GOTO_ROOT=$(echo ~)
@@ -127,7 +124,7 @@ goto () {
     PRNAMES="opt usr"
     PRPATHS="$GOTO_ROOT/opt $GOTO_ROOT/usr $GOTO_ROOT/Library $GOTO_ROOT/.Trash $GOTO_ROOT/Music $GOTO_ROOT/Pictures $GOTO_ROOT/Applications $GOTO_ROOT/Downloads $GOTO_ROOT/tmp $GOTO_ROOT/.*"
 
-    if [ "$OS" = "Darwin" ]; then
+    if [ "$(uname)" = "Darwin" ]; then
         updatedb --localpaths="$GOTO_ROOT" --prunepaths="$PRPATHS" --output="$GOTO_ROOT/.cache/goto.db"
     else
         # update the database
