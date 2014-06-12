@@ -16,4 +16,6 @@ if [ -d ~/usr/bin ]; then
 	PATH="$HOME/usr/bin:$PATH"
 fi
 
+export OS=$(uname)
+
 [[ -f ~/.bashrc ]] && . ~/.bashrc

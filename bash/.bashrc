@@ -39,11 +39,11 @@ export PS1="${BGREEN}\u ${BLUE}\w${YELLOW}\$(__git_ps1) ${RED}\$ ${NORMAL}"
 alias sudo='sudo '
 
 # enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
+if [ -x /usr/bin/dircolors ] || [ "$OS" = "Darwin" ]; then
+    if [ "$OS" != "Darwin" ]; then
+        test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+        alias ls='ls --color=auto'
+    fi
 
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
@@ -82,7 +82,7 @@ alias j='java'
 alias v='vim'
 
 # MAC OS aliases
-if [ "$(uname)" = "Darwin" ]; then
+if [ "$OS" = "Darwin" ]; then
     FINDUTIL_DIR="/usr/local/Cellar/findutils/4.4.2/bin"
     alias locate="$FINDUTIL_DIR/glocate"
     alias updatedb="$FINDUTIL_DIR/gupdatedb"
@@ -124,15 +124,15 @@ goto () {
     PRNAMES="opt usr"
     PRPATHS="$GOTO_ROOT/opt $GOTO_ROOT/usr $GOTO_ROOT/Library $GOTO_ROOT/.Trash $GOTO_ROOT/Music $GOTO_ROOT/Pictures $GOTO_ROOT/Applications $GOTO_ROOT/Downloads $GOTO_ROOT/tmp $GOTO_ROOT/.*"
 
-    if [ "$(uname)" = "Darwin" ]; then
+    if [ "$OS" = "Darwin" ]; then
         updatedb --localpaths="$GOTO_ROOT" --prunepaths="$PRPATHS" --output="$GOTO_ROOT/.cache/goto.db"
     else
         # update the database
         updatedb --prunenames="$PRNAMES" -l 0 -U ~/ -o ~/.cache/goto.db
     fi
 
-     # and then search it
-     cd "$(locate -d ~/.cache/goto.db -i "$@" | awk '{print length(), $0 | "sort -n" }' | head -n 1 | cut -d " " -f2)";
+    # and then search it
+    cd "$(locate -d ~/.cache/goto.db -i "$@" | awk '{print length(), $0 | "sort -n" }' | head -n 1 | cut -d " " -f2)";
 }
 
 #################
@@ -179,7 +179,7 @@ export EDITOR=vim
 # Sublime shortcut.  Redirects all console output to /dev/null to
 # remove the plethora of annoying errors it prodoces
 if [ -d /opt/Sublime\ Text\ 2 ]; then
-  alias sublime='/opt/Sublime\ Text\ 2/sublime_text &> /dev/null'
+    alias sublime='/opt/Sublime\ Text\ 2/sublime_text &> /dev/null'
 fi
 
 # HomeBrew Completion Files
