@@ -122,7 +122,7 @@ goto () {
     GOTO_ROOT=$(echo ~)
 
     PRNAMES="opt usr"
-    PRPATHS="$GOTO_ROOT/opt $GOTO_ROOT/usr $GOTO_ROOT/Library $GOTO_ROOT/.Trash $GOTO_ROOT/Music $GOTO_ROOT/Pictures $GOTO_ROOT/Applications $GOTO_ROOT/Downloads $GOTO_ROOT/tmp $GOTO_ROOT/.*"
+    PRPATHS="$GOTO_ROOT/opt $GOTO_ROOT/usr $GOTO_ROOT/Library $GOTO_ROOT/.Trash $GOTO_ROOT/Music $GOTO_ROOT/Pictures $GOTO_ROOT/Applications $GOTO_ROOT/tmp $GOTO_ROOT/Public $GOTO_ROOT/.*"
 
     if [ "$OS" = "Darwin" ]; then
         updatedb --localpaths="$GOTO_ROOT" --prunepaths="$PRPATHS" --output="$GOTO_ROOT/.cache/goto.db"
