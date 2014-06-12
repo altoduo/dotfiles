@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ "$#" -ne "2" ]; then
+    echo "Usage: curljson [file with json] [url]"
+    exit
+fi
+
+JSON=$(cat $1)
+URL=$2
+
+curl -H "Content-Type: application/json" -d "$JSON" "$URL"
