@@ -53,6 +53,7 @@ fi
 # General aliases
 alias bashrc='vim ~/.bashrc'
 alias vimrc='vim ~/.vimrc'
+alias vi='vim'
 alias cl='clear'
 alias shutoff='sudo shutdown now'
 alias f='fg'
