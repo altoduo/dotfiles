@@ -15,13 +15,13 @@ force_color_prompt=yes
 # Set Some Colors
 export TERM=xterm-256color
 BGREEN='\[\033[1;32m\]'
-GREEN='\e[0;32m'
+GREEN='\[\e[0;32m\]'
 BRED='\[\033[1;31m\]'
 RED='\[\033[0;31m\]'
 BBLUE='\[\033[1;34m\]'
 BLUE='\[\033[0;34m\]'
 NORMAL='\[\033[00m\]'
-WHITE='\e[1;37m'
+WHITE='\[\e[1;37m\]'
 YELLOW='\[\033[0;33m\]'
 
 # Prompt
