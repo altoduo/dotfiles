@@ -84,6 +84,9 @@ syntax enable
 set background=light
 colorscheme solarized
 
+"Recognize carbon as groovy
+au BufNewFile,BufRead *.carbon set filetype=groovy
+
 "=========================
 "   Plugins and Hotkeys
 "=========================
