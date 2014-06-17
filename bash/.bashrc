@@ -24,11 +24,16 @@ NORMAL='\[\033[00m\]'
 WHITE='\[\e[1;37m\]'
 YELLOW='\[\033[0;33m\]'
 
-# Prompt
+# Prompt - check if git-prompt.sh exists first
 if [ -e "/usr/share/git/git-prompt.sh" ]; then
     . /usr/share/git/git-prompt.sh      # import the interactive git prompt script
+    export PS1="${BGREEN}\u ${BLUE}\w${YELLOW}\$(__git_ps1) ${RED}\$ ${NORMAL}"
+elif [ -e "/usr/local/etc/bash_completion.d/git-prompt.sh" ]; then
+    . /usr/local/etc/bash_completion.d/git-prompt.sh # import the interactive git prompt
+    export PS1="${BGREEN}\u ${BLUE}\w${YELLOW}\$(__git_ps1) ${RED}\$ ${NORMAL}"
+else
+    export PS1="${BGREEN}\u ${BLUE}\w ${RED}\$ ${NORMAL}"
 fi
-export PS1="${BGREEN}\u ${BLUE}\w${YELLOW}\$(__git_ps1) ${RED}\$ ${NORMAL}"
 
 #################
 #    Aliases    #
