@@ -31,6 +31,11 @@ set smarttab
 set autoindent
 set softtabstop=4
 
+"Text wrap
+set wrap
+set linebreak
+set nolist
+
 "Expand ^I and retab
  if has("autocmd")
     au BufReadPost * if &modifiable | retab | endif
