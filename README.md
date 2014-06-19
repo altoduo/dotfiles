@@ -1,4 +1,4 @@
-AwesomeRC
+dotfiles
 =========
 
 This repository contains many valueable shortcuts and autonomous scripts for various applications listed below.
