@@ -64,6 +64,8 @@ alias shutoff='sudo shutdown now'
 alias f='fg'
 alias xpbcopy='xclip -selection clipboard'
 alias xpbpaste='xclip -selection clipboard -o'
+alias pbc='cat $1 | pbcopy'
+alias xpbc='cat $1 | xpbcopy'
 
 # ls aliases
 alias ll='ls -lhFG'
@@ -115,15 +117,6 @@ pk () {
     cd $1
     la
     cd ..
-}
-
-# pbcopy made simple
-pbc () {
-    cat $1 | pbcopy
-}
-
-xpbc () {
-    cat $1 | xpbcopy
 }
 
 # goto *any folder* Added support for any computer user
