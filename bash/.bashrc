@@ -123,6 +123,9 @@ xpbc () {
     cat $1 | xpbcopy
 }
 
+#Standard uncompressing of tar.gz
+untar () {tar -zxvf $1}
+
 # goto *any folder* Added support for any computer user
 goto () {
     GOTO_ROOT=$(echo ~)
