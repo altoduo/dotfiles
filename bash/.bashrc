@@ -81,6 +81,9 @@ alias pullr='git pull -r'
 alias gpom='git push origin master'
 alias status='git status'
 
+# default untar command
+alias untar='tar -zcvf'
+
 # Program aliases
 alias p='python'
 alias c='gcc'
@@ -122,9 +125,6 @@ pbc () {
 xpbc () {
     cat $1 | xpbcopy
 }
-
-#Standard uncompressing of tar.gz
-untar () {tar -zxvf $1}
 
 # goto *any folder* Added support for any computer user
 goto () {
