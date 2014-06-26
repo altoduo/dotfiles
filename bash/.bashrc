@@ -67,6 +67,7 @@ alias xpbcopy='xclip -selection clipboard'
 alias xpbpaste='xclip -selection clipboard -o'
 alias pbc='cat $1 | pbcopy'
 alias xpbc='cat $1 | xpbcopy'
+alias tailf='tail -f'
 
 # ls aliases
 alias ll='ls -lhFG'
