@@ -1,0 +1,4 @@
+ln -s ~/scripts/dotfiles/bash/.bashrc ~/.bashrc
+ln -s ~/scripts/dotfiles/vim/.vimrc ~/.vimrc
+ln -s ~/scripts/dotfiles/vim/.vim/ ~/.vim
+ln -s ~/scripts/dotfiles/git/.gitconfig ~/.gitconfig
