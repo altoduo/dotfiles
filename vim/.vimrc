@@ -1,6 +1,6 @@
 """"""""""""""""""""""""""""""""""""""""""""
-"               AwesomeRC                  "
-" git@github.com:DepthDeluxe/AwesomeRC.git "
+"               dotfiles                   "
+" git@github.com:DepthDeluxe/dotfiles.git  "
 """"""""""""""""""""""""""""""""""""""""""""
 
 "=========================
