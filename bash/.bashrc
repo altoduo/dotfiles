@@ -73,7 +73,7 @@ alias tailf='tail -f'
 alias ll='ls -lhFG'
 alias lla='ll -a'
 alias la='ls -a'
-alias l='ls -CF'
+alias l='ls -CFGh'
 alias k='cd .. && l'
 
 # git aliases
