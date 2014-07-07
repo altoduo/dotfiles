@@ -166,3 +166,4 @@ inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
 "Keep the cursor in the center of the screen
 "map <Up> <Up>zz
 "map <Down> <Down>zz
+set foldlevel=999
