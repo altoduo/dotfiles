@@ -159,13 +159,11 @@ cdmagic() {
     for folder in ${DIRECTORY[@]}; do
         dir_list=$(ls -1Fa "$NEW_PATH" | grep /)
         include_amt=${#folder}
+        found="false"
         while [ "$include_amt" -gt 0 ]; do
             # grep the result
             RESULT=$(echo "$dir_list" | egrep -i "^(${folder:0:$include_amt})")
-            if [ "$RESULT" == "" ]; then
-                echo "couldn't find $DIRECTORY"
-                return
-            else
+            if [ "$RESULT" != "" ]; then
                 # set IFS to newline
                 IFS=$'\n'
                 RESULT=($RESULT)
@@ -175,12 +173,20 @@ cdmagic() {
                 
                 # set it back
                 IFS="/"
+                found="true"
                 break
             fi
             
             # subtract one from the include amount
             include_amt=$(($include_amt - 1))
         done
+        
+        if [ "$found" == "false" ]; then
+            echo "couldn't find $DIRECTORY"
+            return
+        fi
+        
+        
     done
     
     \cd "$NEW_PATH"
