@@ -117,6 +117,10 @@ map <Leader><Space> :noh<CR>
 "<F9> to execute current buffer with python
 nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
 
+"Mods for PyMode
+set foldlevel=999
+let g:pymode_lint_write = 0
+
 "=========================
 "       Functions
 "=========================
@@ -166,4 +170,3 @@ inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
 "Keep the cursor in the center of the screen
 "map <Up> <Up>zz
 "map <Down> <Down>zz
-set foldlevel=999
