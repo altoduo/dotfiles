@@ -65,6 +65,9 @@ set directory=~/.vim/swap//
 "Vim marks available after file close, remain in buffer
 set viminfo='1000,f1
 
+"Allow saving of files as sudo if I forgot to open as sudo
+cmap w!! w !sudo tee > /dev/null %
+
 "=========================
 "         Colors
 "=========================
