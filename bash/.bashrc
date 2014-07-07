@@ -49,6 +49,8 @@ if [ -x /usr/bin/dircolors ] || [ "$OS" = "Darwin" ]; then
     if [ "$OS" != "Darwin" ]; then
         test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
         alias ls='ls --color=auto'
+    else
+        alias ls='ls -G'
     fi
 
     alias grep='grep --color=auto'
@@ -69,12 +71,13 @@ alias pbc='cat $1 | pbcopy'
 alias xpbc='cat $1 | xpbcopy'
 alias tailf='tail -f'
 
-# ls aliases
-alias ll='ls -lhFG'
+# ls/cd aliases
+alias cd='cdmagic'
+alias ll='ls -lhF'
 alias lla='ll -a'
 alias la='ls -a'
-alias l='ls -CFGh'
-alias k='cd .. && l'
+alias l='ls -CFh'
+alias k='\cd .. && l'
 
 # git aliases
 alias add='git add'
@@ -137,6 +140,35 @@ goto () {
 
     # and then search it
     cd "$(locate -d ~/.cache/goto.db -i "$@" | awk '{print length(), $0 | "sort -n" }' | head -n 1 | cut -d " " -f2)";
+}
+
+# cd no matter what
+cdmagic() {
+    #!/bin/bash
+    DIRECTORY=$1
+        
+    # backlslashes before command removes the alias
+    \cd $DIRECTORY 2> /tmp/_cdmagic_result
+    RESULT=$(</tmp/_cdmagic_result)
+    
+    if [ "$RESULT" == "" ]; then
+        return
+    fi
+    
+    INCLUDE_AMT=${#DIRECTORY}
+    while [ "$INCLUDE_AMT" -gt 0 ]; do
+        # grep the result
+        RESULT=$(ls -1 | grep -i ${DIRECTORY:0:$INCLUDE_AMT})
+        if [ "$RESULT" != "" ]; then
+            \cd $RESULT
+            return
+        fi
+        
+        # subtract one from the include amount
+        INCLUDE_AMT=$(($INCLUDE_AMT - 1))
+    done
+
+    echo "couldn't find $DIRECTORY"
 }
 
 #################
