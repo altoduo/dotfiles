@@ -150,27 +150,40 @@ cdmagic() {
     # backlslashes before command removes the alias
     \cd $DIRECTORY 2> /tmp/_cdmagic_result
     RESULT=$(</tmp/_cdmagic_result)
-    
     if [ "$RESULT" == "" ]; then
         return
     fi
     
-    FOLDERS=$(ls -1Fa | grep /)
-    INCLUDE_AMT=${#DIRECTORY}
-    echo $FOLDERS
-    while [ "$INCLUDE_AMT" -gt 0 ]; do
-        # grep the result
-        RESULT=$(echo "$FOLDERS" | egrep -i "^(${DIRECTORY:0:$INCLUDE_AMT})")
-        if [ "$RESULT" != "" ]; then
-            \cd $RESULT
-            return
-        fi
-        
-        # subtract one from the include amount
-        INCLUDE_AMT=$(($INCLUDE_AMT - 1))
+    NEW_PATH="./"
+    IFS="/"
+    for folder in ${DIRECTORY[@]}; do
+        dir_list=$(ls -1Fa "$NEW_PATH" | grep /)
+        include_amt=${#folder}
+        while [ "$include_amt" -gt 0 ]; do
+            # grep the result
+            RESULT=$(echo "$dir_list" | egrep -i "^(${folder:0:$include_amt})")
+            if [ "$RESULT" == "" ]; then
+                echo "couldn't find $DIRECTORY"
+                return
+            else
+                # set IFS to newline
+                IFS=$'\n'
+                RESULT=($RESULT)
+                
+                # only echo out the first result
+                NEW_PATH="${NEW_PATH}${RESULT[0]}"
+                
+                # set it back
+                IFS="/"
+                break
+            fi
+            
+            # subtract one from the include amount
+            include_amt=$(($include_amt - 1))
+        done
     done
-
-    echo "couldn't find $DIRECTORY"
+    
+    \cd "$NEW_PATH"
 }
 
 #################
