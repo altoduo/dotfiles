@@ -155,10 +155,12 @@ cdmagic() {
         return
     fi
     
+    FOLDERS=$(ls -1Fa | grep /)
     INCLUDE_AMT=${#DIRECTORY}
+    echo $FOLDERS
     while [ "$INCLUDE_AMT" -gt 0 ]; do
         # grep the result
-        RESULT=$(ls -1 | grep -i ${DIRECTORY:0:$INCLUDE_AMT})
+        RESULT=$(echo "$FOLDERS" | egrep -i "^(${DIRECTORY:0:$INCLUDE_AMT})")
         if [ "$RESULT" != "" ]; then
             \cd $RESULT
             return
