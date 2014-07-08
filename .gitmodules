@@ -2,11 +2,8 @@
     path = vim/.vim/bundle/nerdtree
     url = git://github.com/scrooloose/nerdtree.git
 [submodule "vim/.vim/bundle/syntastic"]
-	path = vim/.vim/bundle/syntastic
-	url = https://github.com/scrooloose/syntastic.git
-[submodule "vim/.vim/bundle/python-mode"]
-	path = vim/.vim/bundle/python-mode
-	url = git@github.com:klen/python-mode.git
+    path = vim/.vim/bundle/syntastic
+    url = https://github.com/scrooloose/syntastic.git
 [submodule "vim/.vim/bundle/auto-comment"]
 	path = vim/.vim/bundle/auto-comment
 	url = git@github.com:JamshedVesuna/auto-comment.git
@@ -23,5 +20,8 @@
 	path = vim/.vim/bundle/repeat
 	url = https://github.com/tpope/vim-repeat.git
 [submodule "vim/.vim/bundle/fugitive"]
-	path = vim/.vim/bundle/fugitive
-	url = git@github.com:tpope/vim-fugitive.git
+    path = vim/.vim/bundle/fugitive
+    url = git@github.com:tpope/vim-fugitive.git
+[submodule "vim/.vim/bundle/python-mode"]
+	path = vim/.vim/bundle/python-mode
+	url = git@github.com:klen/python-mode.git
