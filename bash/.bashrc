@@ -195,6 +195,28 @@ cdmagic() {
     \cd "$NEW_PATH"
 }
 
+# cd to the git root
+gitroot() {
+    original_folder=$(pwd)
+    
+    while [ true ]; do
+        git_folder=$(ls -1Fa . | grep ".git/")
+        
+        # if none found, go back to original folder
+        if [ $(pwd) == "/" ]; then
+            cd "$original_folder"
+            return
+        fi
+        
+        # keep cding out until you reach a dir with .git/ in it
+        if [ "$git_folder" == "" ]; then
+            cd ..
+        else
+            return
+        fi
+    done
+}
+
 #################
 #    History    #
 #################
