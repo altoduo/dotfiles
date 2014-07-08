@@ -32,6 +32,9 @@ if [ -e "/usr/share/git/git-prompt.sh" ]; then
 elif [ -e "/usr/local/etc/bash_completion.d/git-prompt.sh" ]; then
     . /usr/local/etc/bash_completion.d/git-prompt.sh # import the interactive git prompt
     export PS1="${BGREEN}\u ${BLUE}\w${YELLOW}\$(__git_ps1) ${RED}\$ ${NORMAL}"
+elif [ -e "/etc/bash_completion.d/git-prompt" ]; then
+    . /etc/bash_completion.d/git-prompt # import the interactive git prompt
+    export PS1="${BGREEN}\u ${BLUE}\w${YELLOW}\$(__git_ps1) ${RED}\$ ${NORMAL}"
 else
     export PS1="${BGREEN}\u ${BLUE}\w ${RED}\$ ${NORMAL}"
 fi
