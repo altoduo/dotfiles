@@ -89,11 +89,12 @@ set incsearch
 
 "Set color scheme
 syntax enable
-set background=light
+set background=dark
 colorscheme solarized
 
-"Recognize carbon as groovy
+"Recognize files as other files
 au BufNewFile,BufRead *.carbon set filetype=groovy
+au BufNewFile,BufRead *.md set filetype=markdown
 
 "=========================
 "   Plugins and Hotkeys
