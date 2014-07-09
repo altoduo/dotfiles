@@ -149,14 +149,12 @@ goto () {
 cdmagic() {
     #!/bin/bash
     DIRECTORY=$1
-        
     # backlslashes before command removes the alias
     \cd "$DIRECTORY" 2> /tmp/_cdmagic_result
     RESULT=$(</tmp/_cdmagic_result)
     if [ "$RESULT" == "" ]; then
         return
     fi
-    
     NEW_PATH="./"
     IFS="/"
     for folder in ${DIRECTORY[@]}; do
@@ -179,35 +177,27 @@ cdmagic() {
                 found="true"
                 break
             fi
-            
             # subtract one from the include amount
             include_amt=$(($include_amt - 1))
         done
-        
         if [ "$found" == "false" ]; then
             echo "couldn't find $DIRECTORY"
             return
         fi
-        
-        
     done
-    
     \cd "$NEW_PATH"
 }
 
 # cd to the git root
-gitroot() {
+cdgroot() {
     original_folder=$(pwd)
-    
     while [ true ]; do
         git_folder=$(ls -1Fa . | grep ".git/")
-        
         # if none found, go back to original folder
         if [ $(pwd) == "/" ]; then
             cd "$original_folder"
             return
         fi
-        
         # keep cding out until you reach a dir with .git/ in it
         if [ "$git_folder" == "" ]; then
             cd ..
