@@ -7,7 +7,7 @@
     autosetuprebase = always
 [alias]
     ci = commit
-    st = status
+    st = status --ignore-submodules
     co = checkout
     br = branch --color -av
     rb = rebase
