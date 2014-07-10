@@ -68,6 +68,15 @@ set viminfo='1000,f1
 "Allow saving of files as sudo if I forgot to open as sudo
 cmap w!! w !sudo tee > /dev/null %
 
+"Remove all whitespace on write
+autocmd BufWritePre * :%s/\s\+$//e
+
+"Vim split navigation shortcuts
+map <C-H> <C-W>h<C-W>_
+map <C-L> <C-W>l<C-W>_
+map <C-J> <C-W>j<C-W>_
+map <C-K> <C-W>k<C-W>_
+
 "=========================
 "         Colors
 "=========================
