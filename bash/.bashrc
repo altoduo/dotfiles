@@ -82,15 +82,6 @@ alias la='ls -a'
 alias l='ls -CFh'
 alias k='\cd .. && l'
 
-# git aliases
-alias add='git add'
-alias commit='git commit'
-alias push='git push'
-alias pull='git pull'
-alias pullr='git pull -r'
-alias gpom='git push origin master'
-alias status='git status'
-
 # default untar command
 alias untar='tar -zcvf'
 
@@ -168,10 +159,10 @@ cdmagic() {
                 # set IFS to newline
                 IFS=$'\n'
                 RESULT=($RESULT)
-                
+
                 # only echo out the first result
                 NEW_PATH="${NEW_PATH}${RESULT[0]}"
-                
+
                 # set it back
                 IFS="/"
                 found="true"

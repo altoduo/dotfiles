@@ -6,6 +6,7 @@
 [branch]
     autosetuprebase = always
 [alias]
+    pullr = pull -r
     ci = commit
     st = status --ignore-submodules
     co = checkout
