@@ -10,33 +10,22 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
-# Colored prompt
-force_color_prompt=yes
-
-# Set Some Colors
-export TERM=xterm-256color
-BGREEN='\[\033[1;32m\]'
-GREEN='\[\e[0;32m\]'
-BRED='\[\033[1;31m\]'
-RED='\[\033[0;31m\]'
-BBLUE='\[\033[1;34m\]'
-BLUE='\[\033[0;34m\]'
-NORMAL='\[\033[00m\]'
-WHITE='\[\e[1;37m\]'
-YELLOW='\[\033[0;33m\]'
+# import bash_colors script
+. $AWESOME_PATH/bash/bash_colors
 
 # Prompt - check if git-prompt.sh exists first
+fancy_ps1="\[${BGreen}\]\u \[${Blue}\]\w\[${Yellow}\]\$(__git_ps1) \[${Red}\]\$ \[${Black}\]"
 if [ -e "/usr/share/git/git-prompt.sh" ]; then
     . /usr/share/git/git-prompt.sh      # import the interactive git prompt script
-    export PS1="${BGREEN}\u ${BLUE}\w${YELLOW}\$(__git_ps1) ${RED}\$ ${NORMAL}"
+    export PS1=${fancy_ps1}
 elif [ -e "/usr/local/etc/bash_completion.d/git-prompt.sh" ]; then
     . /usr/local/etc/bash_completion.d/git-prompt.sh # import the interactive git prompt
-    export PS1="${BGREEN}\u ${BLUE}\w${YELLOW}\$(__git_ps1) ${RED}\$ ${NORMAL}"
+    export PS1=${fancy_ps1}
 elif [ -e "/etc/bash_completion.d/git-prompt" ]; then
     . /etc/bash_completion.d/git-prompt # import the interactive git prompt
-    export PS1="${BGREEN}\u ${BLUE}\w${YELLOW}\$(__git_ps1) ${RED}\$ ${NORMAL}"
+    export PS1=${fancy_ps1}
 else
-    export PS1="${BGREEN}\u ${BLUE}\w ${RED}\$ ${NORMAL}"
+    export PS1="\[${BGreen}\]\u \[${Blue}\]\w \[${Red}\]\$ \[${Black}\]"
 fi
 
 #################
