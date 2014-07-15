@@ -17,6 +17,7 @@
     graph = log --decorate --graph --all
     hlog = log --date-order --all --graph --format=\"%C(green)%H%Creset %C(yellow)%an%Creset %C(blue bold)%ar%Creset %C(red bold)%d%Creset%s\"
     d = diff --color-words
+    cfiles = diff-tree --no-commit-id --name-only -r HEAD~1
 [core]
     pager = less -FrX --ignore-case
 [color]
