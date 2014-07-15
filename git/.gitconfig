@@ -1,6 +1,7 @@
-[user]
-#    name =
-#    email =
+# This file is meant to be imported by your own .gitconfig
+# To import, write
+# [include]
+#   path = /path/to/this/file
 [push]
     default = upstream
 [branch]
