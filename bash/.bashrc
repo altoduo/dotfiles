@@ -62,8 +62,8 @@ if [ -x /usr/bin/dircolors ] || [ "$OS" = "Darwin" ]; then
 fi
 
 # General aliases
-alias bashrc='vim ~/.bashrc'
-alias vimrc='vim ~/.vimrc'
+alias bashrc='vim ~/scripts/dotfiles/bash/.bashrc'
+alias vimrc='vim ~/scripts/dotfiles/vim/.vimrc'
 alias vi='vim'
 alias cl='clear'
 alias shutoff='sudo shutdown now'
