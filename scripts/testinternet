@@ -1,0 +1,27 @@
+#!/bin/bash
+
+echo -n "Ping: "
+
+while [ true ]; do
+    PING_TIME=$(ping -c 1 8.8.8.8 | egrep -o time=[0-9]+\.[0-9]+ | sed s/time=// | sed )
+    
+    # get an integer
+    PT_INT=$(echo $PING_TIME | sed s/\\.[0-9]*//)
+    
+    if [ "$PT_INT" -lt $((100)) ]; then
+        COLOR=${Green}
+        CHAR=✓
+    elif [ "$PT_INT" -lt $((250)) ]; then
+        COLOR=${Yellow}
+        CHAR=!
+    else
+        COLOR=${Red}
+        CHAR=X
+    fi
+    
+    printf "\r${COLOR}${CHAR}    Ping: ${PING_TIME} ms ${Black}"
+
+    # ping only every .5 seconds
+    sleep 1
+
+done
