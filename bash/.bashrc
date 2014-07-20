@@ -132,6 +132,9 @@ cdmagic() {
     DIRECTORY=$1
     # backlslashes before command removes the alias
     \cd "$DIRECTORY" 2> /tmp/_cdmagic_result
+    if [ "$DIRECTORY" == "" ]; then
+        \cd ~
+    fi
     RESULT=$(</tmp/_cdmagic_result)
     if [ "$RESULT" == "" ]; then
         return
