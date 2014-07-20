@@ -66,7 +66,7 @@ set directory=~/.vim/swap//
 set viminfo='1000,f1
 
 "Allow saving of files as sudo if I forgot to open as sudo
-cmap w!! w !sudo tee > /dev/null %
+cmap w!! w !sudo tee %
 
 "Remove all whitespace on write
 autocmd BufWritePre * :%s/\s\+$//e
