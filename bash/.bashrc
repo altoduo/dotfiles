@@ -14,7 +14,7 @@
 . $AWESOME_PATH/bash/bash_colors
 
 # Prompt - check if git-prompt.sh exists first
-fancy_ps1="\[${BGreen}\]\u \[${Blue}\]\w\[${Yellow}\]\$(__git_ps1) \[${Red}\]\$ \[${Black}\]"
+fancy_ps1="\[${BGreen}\]\u \[${Blue}\]\w\[${Yellow}\]\$(__git_ps1) \[${Red}\]\$ \[${Color_Off}\]"
 if [ -e "/usr/share/git/git-prompt.sh" ]; then
     . /usr/share/git/git-prompt.sh      # import the interactive git prompt script
     export PS1=${fancy_ps1}
@@ -27,6 +27,7 @@ elif [ -e "/etc/bash_completion.d/git-prompt" ]; then
 else
     export PS1="\[${BGreen}\]\u \[${Blue}\]\w \[${Red}\]\$ \[${Black}\]"
 fi
+trap "echo -ne '\e[0m'" DEBUG
 
 #################
 #    Aliases    #
