@@ -27,7 +27,6 @@ elif [ -e "/etc/bash_completion.d/git-prompt" ]; then
 else
     export PS1="\[${BGreen}\]\u \[${Blue}\]\w \[${Red}\]\$ \[${Black}\]"
 fi
-trap "echo -ne '\e[0m'" DEBUG
 
 #################
 #    Aliases    #
