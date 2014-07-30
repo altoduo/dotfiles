@@ -28,6 +28,11 @@ else
     export PS1="\[${BGreen}\]\u \[${Blue}\]\w \[${Red}\]\$ \[${Black}\]"
 fi
 
+# import git-completion if it exists
+if [ -e "/usr/share/git/git-completion.bash" ]; then
+    . "/usr/share/git/git-completion.bash"
+fi
+
 #################
 #    Aliases    #
 #################
