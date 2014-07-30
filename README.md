@@ -3,6 +3,14 @@ dotfiles
 
 Dotfiles contains configuration for several commonly used \*nix utlities.
 
+Setup
+----
+Typical configuration involves importing the dotfiles into your own custom
+dotfiles directories.  Bash and Git both support this behavior.  If you are
+importing, make sure to export the environment variable `AWESOME_PATH` as the
+root directory of the dotfiles path.
+
+
 Config Files
 ---
 The RC files for commonly used linux applications include:
