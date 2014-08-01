@@ -130,21 +130,25 @@ export EDITOR=vim
     # debian_chroot=$(cat /etc/debian_chroot)
 # fi
 
-# Set a fancy prompt (non-color, unless we know we "want" color)
-#case "$TERM" in
-    # xterm-color) color_prompt=yes;;
-# esac
+#################
+#  XTerm / SSH  #
+#################
 
-# if [ -n "$force_color_prompt" ]; then
-    # if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+# Set a fancy prompt (non-color, unless we know we "want" color)
+case "$TERM" in
+    xterm-color) color_prompt=yes;;
+esac
+
+if [ -n "$force_color_prompt" ]; then
+    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
 # We have color support; assume it's compliant with Ecma-48
 # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
 # a case would tend to support setf rather than setaf.)
-# color_prompt=yes
-    # else
-# color_prompt=
-    # fi
-# fi
+color_prompt=yes
+    else
+color_prompt=
+    fi
+fi
 
 #
 # Completion imports
