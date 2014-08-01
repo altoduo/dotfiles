@@ -1,7 +1,6 @@
 # All Python Cache Folders
 __pycache__
 
-
 # Swap and Temporary Files
 *.swp
 *.!sync
@@ -21,3 +20,6 @@ __pycache__
 # Logs
 *.log
 *.sql
+
+# vim stuff
+.netrwhist
