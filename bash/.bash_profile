@@ -18,7 +18,4 @@ fi
 
 export OS=$(uname)
 
-[[ -f ~/.bashrc ]] && . ~/.bashrc
-[[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
-[[ -s "$HOME/scripts/dotfiles/bash/.bashrc" ]] && source "$HOME/scripts/dotfiles/bash/.bashrc" # Load the default .profile
 [[ -s "$HOME/scripts/spotify/bashSpotify.sh" ]] && source "$HOME/scripts/spotify/bashSpotify.sh" # Load the default .profile
