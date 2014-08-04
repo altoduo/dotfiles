@@ -22,8 +22,10 @@
 [core]
     pager = less -FrX --ignore-case
 [color]
-    diff = always
-    branch = auto
-    interactive = auto
+	diff = auto
+	branch = auto
+	interactive = auto
+	ui = auto
+	status = auto
 [credential]
     helper = osxkeychain

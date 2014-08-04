@@ -5,7 +5,7 @@
 # Changes directory and lists the content inside
 function cdl () {
      cd $1
-     l
+     ls -CFh
 }
 
 # Make directory and cd into it
