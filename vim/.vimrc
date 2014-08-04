@@ -15,13 +15,6 @@ nnoremap ; :
 
 "Bracket auto complete
 inoremap {<Enter> {<CR>.<CR>}<Esc>ki<TAB><DEL>
-"inoremap /*   /**/<Left><Left>
-"inoremap "    ""<Left>
-"inoremap '    ''<Left>
-"inoremap <    <><Left>
-"inoremap (    ()<Left>
-"inoremap [    []<Left>
-"inoremap {    {}<Left>
 
 "Tabbing and Indenting
 set tabstop=4
@@ -161,12 +154,10 @@ map <F2> :call Smaller_V_Window()<CR>
 
 function! Shift_Left()
     execute ':normal v|<'
-    "execute ':normal 0|v|$|<'
 endfunction
 
 function! Shift_Right()
     execute ':normal v|>'
-    "execute ':normal 0|v|$|>'
 endfunction
 
 map <F6> :call Shift_Left()<CR>
