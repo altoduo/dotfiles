@@ -19,6 +19,7 @@ The RC files for commonly used linux applications include:
 2. [Git](http://git-scm.com/)
 3. [Vim](http://www.vim.org/)
 4. [Terminator](http://gnometerminator.blogspot.com/p/introduction.html)
+5. [Tmux](http://tmux.sourceforge.net/)
 
 These files include hot key shortcuts, color schemes, functions for various purposes.
 

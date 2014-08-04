@@ -11,13 +11,6 @@ function cdl () {
 # Make directory and cd into it
 mcd () { mkdir "$1" && cd "$1"; }
 
-# Look in directory without cd into it
-pk () {
-    cd $1
-    la
-    cd ..
-}
-
 # goto *any folder* Added support for any computer user
 goto () {
     GOTO_ROOT=$(echo ~)
