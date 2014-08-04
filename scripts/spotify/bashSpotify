@@ -1,0 +1,11 @@
+#!/bin/sh
+alias spotify='$AWESOME_PATH/scripts/spotify/shpotify/./spotify'
+alias sps='spotify status'
+alias sp='spotify toggle'
+alias spn='spotify next'
+alias spp='spotify prev'
+alias spvu='spotify vol up'
+alias spvd='spotify vol down'
+alias spsh='spotify shuffle'
+alias spr='spotify repeat'
+alias spq='spotify quit'

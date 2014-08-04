@@ -57,6 +57,7 @@ if [ -x /usr/bin/dircolors ] || [ "$OS" = "Darwin" ]; then
 fi
 
 # General aliases
+alias cddot='cd $AWESOME_PATH'
 alias bashrc='vim ~/scripts/dotfiles/bash/.bashrc'
 alias vimrc='vim ~/scripts/dotfiles/vim/.vimrc'
 alias vi='vim'

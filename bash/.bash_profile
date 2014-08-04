@@ -16,6 +16,8 @@ if [ -d ~/usr/bin ]; then
     PATH="$HOME/usr/bin:$PATH"
 fi
 
-export OS=$(uname)
+if [ -e /Applications/Spotify.app ]; then
+    source $AWESOME_PATH/scripts/spotify/bashSpotify
+fi
 
-[[ -s "$HOME/scripts/spotify/bashSpotify.sh" ]] && source "$HOME/scripts/spotify/bashSpotify.sh" # Load the default .profile
+export OS=$(uname)
