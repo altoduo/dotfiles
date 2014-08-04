@@ -105,11 +105,14 @@ au BufNewFile,BufRead *.md set filetype=markdown
 "Run Pathogen Plugin Manager on Startup
 execute pathogen#infect()
 
+"Plugin Filetypes On
+filetype plugin on
+
 "Toggle the NERD Tree
 map <C-n> :NERDTreeToggle<CR>
 
 "Auto-comment
-map <C-c> :call Toggle_Comment()<CR>
+map <C-c> <leader>c<space>
 
 "Search and replace visually selcted text with <Crt-r> (y/n)
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
