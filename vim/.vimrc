@@ -70,6 +70,10 @@ map <C-L> <C-W>l<C-W>_
 map <C-J> <C-W>j<C-W>_
 map <C-K> <C-W>k<C-W>_
 
+"Put new buffers on the right of and below the current buffter
+set splitright
+set splitbelow
+
 "=========================
 "         Colors
 "=========================
