@@ -27,5 +27,3 @@
     interactive = auto
     ui = auto
     status = auto
-[credential]
-    helper = osxkeychain
