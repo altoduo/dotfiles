@@ -60,8 +60,8 @@ fi
 
 # General aliases
 alias cddot='cd $AWESOME_PATH'
-alias bashrc='vim ~/scripts/dotfiles/bash/.bashrc'
-alias vimrc='vim ~/scripts/dotfiles/vim/.vimrc'
+alias bashrc="$EDITOR ~/scripts/dotfiles/bash/.bashrc"
+alias vimrc="$EDITOR ~/scripts/dotfiles/vim/.vimrc"
 alias vi='vim'
 alias cl='clear'
 alias shutoff='sudo shutdown now'
@@ -85,6 +85,7 @@ alias untar='tar -zcvf'
 
 # Program aliases
 alias p='python'
+alias m='make'
 alias c='gcc'
 alias j='java'
 alias v='vim'
@@ -134,7 +135,7 @@ case "$TERM" in
 esac
 
 if [ -n "$force_color_prompt" ]; then
-    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+    if [ -x "/usr/bin/tput" ] && tput setaf 1 >&/dev/null; then
 # We have color support; assume it's compliant with Ecma-48
 # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
 # a case would tend to support setf rather than setaf.)
