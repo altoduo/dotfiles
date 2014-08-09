@@ -11,7 +11,7 @@
 [ -z "$PS1" ] && return
 
 # import bash_colors script
-. "$AWESOME_PATH/bash/bash_colors"
+source "$AWESOME_PATH/bash/bash_colors"
 
 # Prompt - check if git-prompt.sh exists first
 fancy_ps1="\[${BGreen}\]\u \[${Blue}\]\w\[${Yellow}\]\$(__git_ps1) \[${Red}\]\$ \[${Color_Off}\]"
@@ -21,11 +21,11 @@ simple_ps1="\[${BGreen}\]\u \[${Blue}\]\w \[${Red}\]\$ \[${Black}\]"
 
 # import git-prompt
 if [ -e "/usr/share/git/git-prompt.sh" ]; then
-    . "/usr/share/git/git-prompt.sh"
+    source "/usr/share/git/git-prompt.sh"
 elif [ -e "/usr/local/etc/bash_completion.d/git-prompt.sh" ]; then
-    . "/usr/local/etc/bash_completion.d/git-prompt.sh"
+    source "/usr/local/etc/bash_completion.d/git-prompt.sh"
 elif [ -e "/etc/bash_completion.d/git-prompt" ]; then
-    . "/etc/bash_completion.d/git-prompt"
+    source "/etc/bash_completion.d/git-prompt"
 else
     export PS1=${simple_ps1}
 fi
@@ -34,7 +34,7 @@ fi
 #   Functions   #
 #################
 
-. "$AWESOME_PATH/bash/functions.sh"
+source "$AWESOME_PATH/bash/functions.sh"
 
 #################
 #    Aliases    #
@@ -45,7 +45,7 @@ fi
 alias sudo='sudo '
 
 # enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ] || [ "$OS" = "Darwin" ]; then
+if [ -x "/usr/bin/dircolors" ] || [ "$OS" = "Darwin" ]; then
     if [ "$OS" != "Darwin" ]; then
         test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
         alias ls='ls --color=auto'
@@ -151,14 +151,14 @@ fi
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
-if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-    . /etc/bash_completion
+if [ -f "/etc/bash_completion" ] && ! shopt -oq posix; then
+    source "/etc/bash_completion"
 fi
 
 # HomeBrew Completion Files
 brew_bash_completion_dir='/usr/local/etc/bash_completion.d'
-if [ -d $brew_bash_completion_dir ]; then
-    for file in $brew_bash_completion_dir/*; do
+if [ -d "$brew_bash_completion_dir" ]; then
+    for file in "$brew_bash_completion_dir/*"; do
         if [[ -f "$file" ]]; then
             source "$file"
         fi
@@ -167,5 +167,5 @@ fi
 
 # import git-completion if it exists
 if [ -e "/usr/share/git/git-completion.bash" ]; then
-    . "/usr/share/git/git-completion.bash"
+    source "/usr/share/git/git-completion.bash"
 fi
