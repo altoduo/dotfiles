@@ -15,17 +15,19 @@
 
 # Prompt - check if git-prompt.sh exists first
 fancy_ps1="\[${BGreen}\]\u \[${Blue}\]\w\[${Yellow}\]\$(__git_ps1) \[${Red}\]\$ \[${Color_Off}\]"
+export PS1=${fancy_ps1}
+
+simple_ps1="\[${BGreen}\]\u \[${Blue}\]\w \[${Red}\]\$ \[${Black}\]"
+
+# import git-prompt
 if [ -e "/usr/share/git/git-prompt.sh" ]; then
-    . /usr/share/git/git-prompt.sh      # import the interactive git prompt script
-    export PS1=${fancy_ps1}
+    . "/usr/share/git/git-prompt.sh"
 elif [ -e "/usr/local/etc/bash_completion.d/git-prompt.sh" ]; then
-    . /usr/local/etc/bash_completion.d/git-prompt.sh # import the interactive git prompt
-    export PS1=${fancy_ps1}
+    . "/usr/local/etc/bash_completion.d/git-prompt.sh"
 elif [ -e "/etc/bash_completion.d/git-prompt" ]; then
-    . /etc/bash_completion.d/git-prompt # import the interactive git prompt
-    export PS1=${fancy_ps1}
+    . "/etc/bash_completion.d/git-prompt"
 else
-    export PS1="\[${BGreen}\]\u \[${Blue}\]\w \[${Red}\]\$ \[${Black}\]"
+    export PS1=${simple_ps1}
 fi
 
 #################
