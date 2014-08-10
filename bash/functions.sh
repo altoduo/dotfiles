@@ -13,20 +13,23 @@ mcd () { mkdir "$1" && cd "$1"; }
 
 # goto *any folder* Added support for any computer user
 goto () {
-    GOTO_ROOT=$(echo ~)
-
-    PRNAMES="opt usr"
-    PRPATHS="$GOTO_ROOT/opt $GOTO_ROOT/usr $GOTO_ROOT/Library $GOTO_ROOT/.Trash $GOTO_ROOT/Music $GOTO_ROOT/Pictures $GOTO_ROOT/Applications $GOTO_ROOT/tmp $GOTO_ROOT/Public $GOTO_ROOT/.*"
+    PRNAMES=".git .hg .svn .cache .cinnamon .atom .gnome .gnome2 .node-gyp .npm .pip .steam tmp temp"
+    PRPATHS="$HOME/builds $HOME/Library $HOME/Music $HOME/Pictures $HOME/Applications $HOME/Public"
 
     if [ "$OS" = "Darwin" ]; then
-        updatedb --localpaths="$GOTO_ROOT" --prunepaths="$PRPATHS" --output="$GOTO_ROOT/.cache/goto.db"
+        updatedb --localpaths="$HOME" --prunepaths="$PRPATHS" --output="$HOME/.cache/goto.db"
     else
         # update the database
-        updatedb --prunenames="$PRNAMES" -l 0 -U ~/ -o ~/.cache/goto.db
+        updatedb --prunenames="$PRNAMES" --prunepaths="$PRPATHS" -l 0 -U ~/ -o ~/.cache/goto.db
     fi
 
     # and then search it
-    cd "$(locate -d ~/.cache/goto.db -i "$@" | awk '{print length(), $0 | "sort -n" }' | head -n 1 | cut -d " " -f2)";
+    DIR=$(locate -d ~/.cache/goto.db -i "$1" | awk '{print length, $0}' | head -1 | sed 's/[0-9]*\s//')
+    if [ "$DIR" != "" ]; then
+        cd ${DIR}
+    else
+        echo "Couldn't find $1"
+    fi
 }
 
 # cd no matter what
@@ -81,7 +84,7 @@ cdgroot() {
     while [ true ]; do
         git_folder=$(ls -1Fa . | grep ".git/")
         # if none found, go back to original folder
-        if [ $(pwd) == "/" ]; then
+        if [ "$(pwd)" == "/" ]; then
             cd "$original_folder"
             return
         fi
