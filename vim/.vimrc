@@ -131,6 +131,10 @@ nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
 set foldlevel=999
 let g:pymode_lint_write = 0
 
+"Mod for vim-airline
+set laststatus=2
+set timeoutlen=50
+
 "=========================
 "       Functions
 "=========================
