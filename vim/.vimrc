@@ -133,7 +133,7 @@ let g:pymode_lint_write = 0
 
 "Mod for vim-airline
 set laststatus=2
-set timeoutlen=50
+"set timeoutlen=50
 
 "=========================
 "       Functions
@@ -183,8 +183,8 @@ inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
 "map <Up> <Up>zz
 "map <Down> <Down>zz
 set cc=80
-set shell=/bin/bash\ --init-file\ ~/.bash_profile\ -i
-set shellcmdflag=-ic
-map <leader>s :call system("sp")<CR>
-map <leader>sn :call system("spn")<CR>
-map <leader>sr :call system("spp")<CR>
+"set shell=/bin/bash\ --init-file\ ~/.bash_profile\ -i
+"set shellcmdflag=-ic
+"map <leader>s :call system("sp")<CR>
+"map <leader>sn :call system("spn")<CR>
+"map <leader>sr :call system("spp")<CR>

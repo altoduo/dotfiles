@@ -22,8 +22,8 @@ simple_ps1="\[${BGreen}\]\u \[${Blue}\]\w \[${Red}\]\$ \[${Black}\]"
 # import git-prompt
 if [ -e "/usr/share/git/git-prompt.sh" ]; then
     source "/usr/share/git/git-prompt.sh"
-elif [ -e "/usr/local/etc/bash_completion.d/git-prompt.sh" ]; then
-    source "/usr/local/etc/bash_completion.d/git-prompt.sh"
+elif [ -e "/usr/local/etc/bash_completion" ]; then
+    source "/usr/local/etc/bash_completion"
 elif [ -e "/etc/bash_completion.d/git-prompt" ]; then
     source "/etc/bash_completion.d/git-prompt"
 else
