@@ -133,7 +133,7 @@ let g:pymode_lint_write = 0
 
 "Mod for vim-airline
 set laststatus=2
-"set timeoutlen=50
+set timeout timeoutlen=1000 ttimeoutlen=100
 
 "=========================
 "       Functions
