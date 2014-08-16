@@ -5,35 +5,38 @@
     path = vim/.vim/bundle/syntastic
     url = https://github.com/scrooloose/syntastic.git
 [submodule "vim/.vim/bundle/auto-comment"]
-	path = vim/.vim/bundle/auto-comment
-	url = git@github.com:JamshedVesuna/auto-comment.git
+    path = vim/.vim/bundle/auto-comment
+    url = git@github.com:JamshedVesuna/auto-comment.git
 [submodule "vim/.vim/bundle/vmath"]
-	path = vim/.vim/bundle/vmath
-	url = https://github.com/gavinbeatty/vmath.vim.git
+    path = vim/.vim/bundle/vmath
+    url = https://github.com/gavinbeatty/vmath.vim.git
 [submodule "vim/.vim/bundle/vim-surround"]
-	path = vim/.vim/bundle/vim-surround
-	url = https://github.com/tpope/vim-surround.git
+    path = vim/.vim/bundle/vim-surround
+    url = https://github.com/tpope/vim-surround.git
 [submodule "vim/.vim/bundle/vim-commentary"]
-	path = vim/.vim/bundle/vim-commentary
-	url = https://github.com/tpope/vim-commentary.git
+    path = vim/.vim/bundle/vim-commentary
+    url = https://github.com/tpope/vim-commentary.git
 [submodule "vim/.vim/bundle/repeat"]
-	path = vim/.vim/bundle/repeat
-	url = https://github.com/tpope/vim-repeat.git
+    path = vim/.vim/bundle/repeat
+    url = https://github.com/tpope/vim-repeat.git
 [submodule "vim/.vim/bundle/fugitive"]
     path = vim/.vim/bundle/fugitive
     url = git@github.com:tpope/vim-fugitive.git
 [submodule "vim/.vim/bundle/python-mode"]
-	path = vim/.vim/bundle/python-mode
-	url = git@github.com:klen/python-mode.git
+    path = vim/.vim/bundle/python-mode
+    url = git@github.com:klen/python-mode.git
 [submodule "scripts/spotify/shpotify"]
-	path = scripts/spotify/shpotify
-	url = git@github.com:hnarayanan/shpotify.git
+    path = scripts/spotify/shpotify
+    url = git@github.com:hnarayanan/shpotify.git
 [submodule "vim/.vim/bundle/nerdcommenter"]
-	path = vim/.vim/bundle/nerdcommenter
-	url = git@github.com:scrooloose/nerdcommenter.git
+    path = vim/.vim/bundle/nerdcommenter
+    url = git@github.com:scrooloose/nerdcommenter.git
 [submodule "vim/.vim/bundle/vim-signature"]
-	path = vim/.vim/bundle/vim-signature
-	url = git@github.com:kshenoy/vim-signature.git
+    path = vim/.vim/bundle/vim-signature
+    url = git@github.com:kshenoy/vim-signature.git
 [submodule "vim/.vim/bundle/vim-airline"]
-	path = vim/.vim/bundle/vim-airline
-	url = git@github.com:bling/vim-airline.git
+    path = vim/.vim/bundle/vim-airline
+    url = git@github.com:bling/vim-airline.git
+[submodule "vim/.vim/bundle/vim-markdown-preview"]
+    path = vim/.vim/bundle/vim-markdown-preview
+    url = git@github.com:JamshedVesuna/vim-markdown-preview.git
