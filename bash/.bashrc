@@ -37,6 +37,23 @@ fi
 source "$AWESOME_PATH/bash/functions.sh"
 
 #################
+# Shell Options #
+#################
+
+# Dynamic line length based on window size
+shopt -s checkwinsize
+
+# Correct mistyped dir names
+shopt -s cdspell
+
+# Case-insensitive matching for filename results
+shopt -s nocaseglob
+
+#Set editor and visual variable
+set -o vi
+export EDITOR=vim
+
+#################
 #    Aliases    #
 #################
 
@@ -60,8 +77,8 @@ fi
 
 # General aliases
 alias cddot='cd $AWESOME_PATH'
-alias bashrc="$EDITOR ~/scripts/dotfiles/bash/.bashrc"
-alias vimrc="$EDITOR ~/scripts/dotfiles/vim/.vimrc"
+alias bashrc="$EDITOR $AWESOME_PATH/bash/.bashrc"
+alias vimrc="$EDITOR $AWESOME_PATH/vim/.vimrc"
 alias vi='vim'
 alias cl='clear'
 alias shutoff='sudo shutdown now'
@@ -107,23 +124,6 @@ HISTCONTROL=ignoreboth
 
 # Append to the history file, don't overwrite it
 shopt -s histappend
-
-#################
-# Shell Options #
-#################
-
-# Dynamic line length based on window size
-shopt -s checkwinsize
-
-# Correct mistyped dir names
-shopt -s cdspell
-
-# Case-insensitive matching for filename results
-shopt -s nocaseglob
-
-#Set editor and visual variable
-set -o vi
-export EDITOR=vim
 
 #################
 #  XTerm / SSH  #
