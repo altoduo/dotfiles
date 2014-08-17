@@ -145,6 +145,9 @@ color_prompt=
     fi
 fi
 
+# Allow for 256 color
+export TERM=xterm-256color
+
 #
 # Completion imports
 #
