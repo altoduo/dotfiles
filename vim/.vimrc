@@ -65,10 +65,10 @@ cmap w!! w !sudo tee %
 autocmd BufWritePre * :%s/\s\+$//e
 
 "Vim split navigation shortcuts
-map <C-H> <C-W>h<C-W>_
-map <C-L> <C-W>l<C-W>_
-map <C-J> <C-W>j<C-W>_
-map <C-K> <C-W>k<C-W>_
+map <C-H> <C-W>h<C-W>
+map <C-L> <C-W>l<C-W>
+map <C-J> <C-W>j<C-W>
+map <C-K> <C-W>k<C-W>
 
 "Put new buffers on the right of and below the current buffter
 set splitright
