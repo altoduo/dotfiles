@@ -74,6 +74,9 @@ map <C-K> <C-W>k<C-W>
 set splitright
 set splitbelow
 
+"Delete specified line and stay in place
+command! -range -nargs=0 D <line1>,<line2>d|norm ``
+
 "=========================
 "         Colors
 "=========================
