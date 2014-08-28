@@ -17,7 +17,7 @@ source "$AWESOME_PATH/bash/bash_colors"
 fancy_ps1="\[${BGreen}\]\u \[${Blue}\]\w\[${Yellow}\]\$(__git_ps1) \[${Red}\]\$ \[${Color_Off}\]"
 export PS1=${fancy_ps1}
 
-simple_ps1="\[${BGreen}\]\u \[${Blue}\]\w \[${Red}\]\$ \[${Black}\]"
+simple_ps1="\[${BGreen}\]\u \[${Blue}\]\w \[${Red}\]\$ \[${Color_Off}\]"
 
 # import git-prompt
 if [ -e "/usr/share/git/git-prompt.sh" ]; then
