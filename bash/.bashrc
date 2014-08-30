@@ -1,6 +1,6 @@
 ############################################
 #               dotfiles                   #
-# git@github.com:DepthDeluxe/dotfiles.git  #
+#   git@github.com:altoduo/dotfiles.git    #
 ############################################
 
 #################
