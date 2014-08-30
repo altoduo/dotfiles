@@ -25,9 +25,6 @@
 [submodule "vim/.vim/bundle/python-mode"]
     path = vim/.vim/bundle/python-mode
     url = git@github.com:klen/python-mode.git
-[submodule "scripts/spotify/shpotify"]
-    path = scripts/spotify/shpotify
-    url = git@github.com:hnarayanan/shpotify.git
 [submodule "vim/.vim/bundle/nerdcommenter"]
     path = vim/.vim/bundle/nerdcommenter
     url = git@github.com:scrooloose/nerdcommenter.git
