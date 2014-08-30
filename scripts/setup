@@ -1,0 +1,57 @@
+#!/bin/bash
+
+############################################
+#               dotfiles                   #
+#   git@github.com:altoduo/dotfiles.git    #
+#             Setup Script                 #
+############################################
+
+DOTDIR="dirname $( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+echo "Using $($DOTDIR) as the location for altoduo's dotfiles"
+
+git submodule update --init --recursive
+git submodule foreach git pull origin master
+
+if [ -f ~/.bashrc ]
+  then
+    echo "export AWESOME_PATH=$($DOTDIR)" >> ~/.bashrc
+    echo "source $AWESOME_PATH/bash/.bashrc" >> ~/.bashrc
+elif [ ! -f ~/.bashrc ]
+  then
+    echo "export AWESOME_PATH=$($DOTDIR)" > ~/.bashrc
+    echo "source $AWESOME_PATH/bash/.bashrc" >> ~/.bashrc
+fi
+
+if [ -f ~/.bash_profile ]
+  then
+    echo "source $AWESOME_PATH/bash/.bash_profile" >> ~/.bash_profile
+elif [ ! -f ~/.bash_profile ]
+  then
+    echo "source $AWESOME_PATH/bash/.bash_profile" > ~/.bash_profile
+fi
+
+if [ -f ~/.vimrc ]
+  then
+    echo "source $AWESOME_PATH/vim/.vimrc" >> ~/.vimrc
+elif [ ! -f ~/.vimrc ]
+  then
+    echo "source $AWESOME_PATH/vim/.vimrc" > ~/.vimrc
+fi
+
+if [ -d ~/.vim ]
+  then
+    echo "A ~/.vim folder already exists - please manually fix this."
+elif [ ! -d ~/.vim ]
+  then
+    ln -s $DOTDIR/vim/.vim/ ~/.vim
+fi
+
+if [ -f ~/.gitconfig ]
+  then
+    echo "[include]" >> ~/.gitconfig
+    echo "  path = $($DOTDIR)/git/.gitconfig" >> ~/.gitconfig
+elif [ ! -f ~/.gitconfig ]
+  then
+    echo "[include]" > ~/.gitconfig
+    echo "  path = $($DOTDIR)/git/.gitconfig" >> ~/.gitconfig
+fi
