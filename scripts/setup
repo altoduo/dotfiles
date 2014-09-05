@@ -15,27 +15,27 @@ git submodule foreach git pull origin master
 if [ -f ~/.bashrc ]
   then
     echo "export AWESOME_PATH=$($DOTDIR)" >> ~/.bashrc
-    echo "source $AWESOME_PATH/bash/.bashrc" >> ~/.bashrc
+    echo "source \$AWESOME_PATH/bash/.bashrc" >> ~/.bashrc
 elif [ ! -f ~/.bashrc ]
   then
     echo "export AWESOME_PATH=$($DOTDIR)" > ~/.bashrc
-    echo "source $AWESOME_PATH/bash/.bashrc" >> ~/.bashrc
+    echo "source \$AWESOME_PATH/bash/.bashrc" >> ~/.bashrc
 fi
 
 if [ -f ~/.bash_profile ]
   then
-    echo "source $AWESOME_PATH/bash/.bash_profile" >> ~/.bash_profile
+    echo "source \$AWESOME_PATH/bash/.bash_profile" >> ~/.bash_profile
 elif [ ! -f ~/.bash_profile ]
   then
-    echo "source $AWESOME_PATH/bash/.bash_profile" > ~/.bash_profile
+    echo "source \$AWESOME_PATH/bash/.bash_profile" > ~/.bash_profile
 fi
 
 if [ -f ~/.vimrc ]
   then
-    echo "source $AWESOME_PATH/vim/.vimrc" >> ~/.vimrc
+    echo "source \$AWESOME_PATH/vim/.vimrc" >> ~/.vimrc
 elif [ ! -f ~/.vimrc ]
   then
-    echo "source $AWESOME_PATH/vim/.vimrc" > ~/.vimrc
+    echo "source \$AWESOME_PATH/vim/.vimrc" > ~/.vimrc
 fi
 
 if [ -d ~/.vim ]
@@ -43,7 +43,7 @@ if [ -d ~/.vim ]
     echo "A ~/.vim folder already exists - please manually fix this."
 elif [ ! -d ~/.vim ]
   then
-    ln -s $DOTDIR/vim/.vim/ ~/.vim
+    ln -s $($DOTDIR)/vim/.vim ~/.vim
 fi
 
 if [ -f ~/.gitconfig ]
