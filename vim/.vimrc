@@ -192,7 +192,7 @@ inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
 "Keep the cursor in the center of the screen
 "map <Up> <Up>zz
 "map <Down> <Down>zz
-set cc=80
+autocmd BufNewFile,BufRead *.py, set cc=80
 "set shell=/bin/bash\ --init-file\ ~/.bash_profile\ -i
 "set shellcmdflag=-ic
 "map <leader>s :call system("sp")<CR>
