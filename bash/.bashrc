@@ -52,6 +52,8 @@ shopt -s nocaseglob
 #Set editor and visual variable
 set -o vi
 export EDITOR=vim
+export GIT_EDITOR=vim
+export VISUAL=vim
 
 #################
 #    Aliases    #
