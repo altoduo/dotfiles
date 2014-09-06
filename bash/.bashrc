@@ -37,6 +37,13 @@ fi
 source "$AWESOME_PATH/bash/functions.sh"
 
 #################
+#   Variables  #
+#################
+
+# Set the title of terminal
+PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD/$HOME/~}\007"'
+
+#################
 # Shell Options #
 #################
 
