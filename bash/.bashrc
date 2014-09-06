@@ -106,7 +106,8 @@ alias la='ls -a'
 alias l='ls -CFh'
 alias k='\cd .. && l'
 
-# default untar command
+# File aliases
+alias sizeof="du -sch"
 alias untar='tar -zcvf'
 
 # Program aliases
