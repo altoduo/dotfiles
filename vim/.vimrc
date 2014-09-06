@@ -77,6 +77,10 @@ set splitbelow
 "Delete specified line and stay in place
 command! -range -nargs=0 D <line1>,<line2>d|norm ``
 
+"Map my mistakes to real things
+command! W w
+command! Q q
+
 "=========================
 "         Colors
 "=========================
