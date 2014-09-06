@@ -81,6 +81,9 @@ command! -range -nargs=0 D <line1>,<line2>d|norm ``
 command! W w
 command! Q q
 
+"Set the terminal's title when using vim
+set title
+
 "=========================
 "         Colors
 "=========================
