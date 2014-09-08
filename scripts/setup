@@ -20,6 +20,7 @@ elif [ ! -f ~/.bashrc ]
   then
     echo "export AWESOME_PATH=$($DOTDIR)" > ~/.bashrc
     echo "source \$AWESOME_PATH/bash/.bashrc" >> ~/.bashrc
+    #echo "souce \$AWESOME_PATH/scripts/spotify/spotibash" >> ~/.bashrc
 fi
 
 if [ -f ~/.bash_profile ]
