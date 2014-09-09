@@ -96,3 +96,8 @@ cdgroot() {
         fi
     done
 }
+
+# Only show the process I'm interested in, ex gtop python
+gtop() {
+    top -p `pgrep "$1" | tr "\\n" "," | sed 's/,$//'`
+}
