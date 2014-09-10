@@ -199,3 +199,6 @@ autocmd BufNewFile,BufRead *.py, set cc=80
 "map <leader>sn :call system("spn")<CR>
 "map <leader>sr :call system("spp")<CR>
 set updatetime=5
+let g:solarized_contrast="high"
+let g:solarized_visibility="high"
+let g:solarized_hitrail=1
