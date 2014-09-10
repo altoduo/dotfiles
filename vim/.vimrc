@@ -198,3 +198,4 @@ autocmd BufNewFile,BufRead *.py, set cc=80
 "map <leader>s :call system("sp")<CR>
 "map <leader>sn :call system("spn")<CR>
 "map <leader>sr :call system("spp")<CR>
+set updatetime=5
