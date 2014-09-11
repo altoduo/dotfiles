@@ -115,7 +115,8 @@ alias p='python'
 alias m='make'
 alias c='gcc'
 alias j='java'
-alias v='vim'
+alias v='vim --servername VIM'
+alias vt='vim --remote-tab'
 
 # MAC OS aliases
 if [ "$OS" = "Darwin" ]; then
