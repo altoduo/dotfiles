@@ -112,6 +112,9 @@ colorscheme solarized
 au BufNewFile,BufRead *.carbon set filetype=groovy
 au BufNewFile,BufRead *.md set filetype=markdown
 
+"Set colorcolumn at 80 chars for python files only
+autocmd BufNewFile,BufRead *.py, set cc=80
+
 "=========================
 "   Plugins and Hotkeys
 "=========================
@@ -192,13 +195,13 @@ inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
 "Keep the cursor in the center of the screen
 "map <Up> <Up>zz
 "map <Down> <Down>zz
-autocmd BufNewFile,BufRead *.py, set cc=80
 "set shell=/bin/bash\ --init-file\ ~/.bash_profile\ -i
 "set shellcmdflag=-ic
 "map <leader>s :call system("sp")<CR>
 "map <leader>sn :call system("spn")<CR>
 "map <leader>sr :call system("spp")<CR>
-set updatetime=5
+set updatetime=100
 let g:solarized_contrast="high"
 let g:solarized_visibility="high"
 let g:solarized_hitrail=1
+set noswapfile
