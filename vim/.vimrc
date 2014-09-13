@@ -148,6 +148,9 @@ let g:pymode_lint_write = 0
 set laststatus=2
 set timeout timeoutlen=1000 ttimeoutlen=100
 
+"Mod for vim-signature
+set updatetime=100
+
 "=========================
 "       Functions
 "=========================
@@ -192,10 +195,6 @@ inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
 "       Experimental
 "=========================
 
-"Keep the cursor in the center of the screen
-"map <Up> <Up>zz
-"map <Down> <Down>zz
-set updatetime=100
 let g:solarized_contrast="high"
 let g:solarized_visibility="high"
 let g:solarized_hitrail=1
