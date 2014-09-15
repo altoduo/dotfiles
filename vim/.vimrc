@@ -127,6 +127,7 @@ filetype plugin on
 
 "Toggle the NERD Tree
 map <C-n> :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
 
 "Auto-comment
 map <C-c> <leader>c<space>
