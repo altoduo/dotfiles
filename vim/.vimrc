@@ -200,3 +200,5 @@ let g:solarized_contrast="high"
 let g:solarized_visibility="high"
 let g:solarized_hitrail=1
 set noswapfile
+"Auto buffer reads
+set autoread
