@@ -6,9 +6,9 @@
   focus = system
   use_custom_url_handler = True
   suppress_multiple_term_dialog = True
+  enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
   title_transmit_bg_color = "#d30102"
   inactive_color_offset = 1.2
-  borderless = False
 [keybindings]
 [profiles]
   [[default]]
