@@ -62,6 +62,9 @@ export EDITOR=vim
 export GIT_EDITOR=vim
 export VISUAL=vim
 
+# Use UTF-8 Locale
+export LANG="en_US.UTF-8"
+
 #################
 #    Aliases    #
 #################
