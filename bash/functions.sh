@@ -99,5 +99,20 @@ cdgroot() {
 
 # Only show the process I'm interested in, ex gtop python
 gtop() {
-    top -p `pgrep "$1" | tr "\\n" "," | sed 's/,$//'`
+  # ensure proper usage
+  if [ "$#" -ne "1" ]; then
+    echo "GTop: Search running programs on your system"
+    echo "Usage: gtop [program name]"
+    return 1
+  fi
+  PROGRAM=${1}
+
+  # ensure that the process exists
+  OUT=$(ps -e | grep -o $PROGRAM)
+  if [ "${#OUT}" -eq "0" ]; then
+    echo "GTop: \"$PROGRAM\" is not running"
+    return 0
+  fi
+
+  top -p `pgrep "$PROGRAM" | tr "\\n" "," | sed 's/,$//'`
 }
