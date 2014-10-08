@@ -34,11 +34,6 @@ set wrap
 set linebreak
 set nolist
 
-"Expand ^I and retab
- "if has("autocmd")
-    "au BufReadPost * if &modifiable | retab | endif
-"endif
-
 "Copy/Paste integration with system
 set clipboard=unnamed
 
@@ -52,7 +47,7 @@ autocmd! bufwritepost .vimrc source %
 set iskeyword+=-
 
 "Display endline whitespace
-set listchars=trail:.
+set listchars=tab:▸\ ,trail:.
 set list
 
 "Place vim temp files somewhere else
@@ -207,31 +202,3 @@ let g:solarized_hitrail=1
 set noswapfile
 "Auto buffer reads
 set autoread
-
-
-"What the f*^& ???
-" SeeTab: toggles between showing tabs and using standard listchars
-fu! SeeTab()
-  if !exists("g:SeeTabEnabled")
-    let g:SeeTabEnabled = 1
-    let g:SeeTab_list = &list
-    let g:SeeTab_listchars = &listchars
-    let regA = @a
-    redir @a
-    hi SpecialKey
-    redir END
-    let g:SeeTabSpecialKey = @a
-    let @a = regA
-    silent! hi SpecialKey guifg=black guibg=magenta ctermfg=black ctermbg=magenta
-    set list
-    set listchars=tab:\T\
-  else
-    let &list = g:SeeTab_list
-    let &listchars = &listchars
-    silent! exe "hi ".substitute(g:SeeTabSpecialKey,'xxx','','e')
-    unlet g:SeeTabEnabled g:SeeTab_list g:SeeTab_listchars
-  endif
-endfunc
-com! -nargs=0 SeeTab :call SeeTab()
-
-autocmd FileType make silent! SeeTab
