@@ -47,7 +47,7 @@ autocmd! bufwritepost .vimrc source %
 set iskeyword+=-
 
 "Display endline whitespace
-set listchars=tab:▸\ ,trail:.
+set listchars=tab:▸\ ,trail:¤
 set list
 
 "Place vim temp files somewhere else
