@@ -100,19 +100,23 @@ cdgroot() {
 # Only show the process I'm interested in, ex gtop python
 gtop() {
   # ensure proper usage
-  if [ "$#" -ne "1" ]; then
-    echo "GTop: Search running programs on your system"
+  if [ "$#" -eq "0" ]; then
+    echo "gTop: Search running programs on your system"
     echo "Usage: gtop [program name]"
     return 1
   fi
-  PROGRAM=${1}
 
-  # ensure that the process exists
-  OUT=$(ps -e | grep -o $PROGRAM)
-  if [ "${#OUT}" -eq "0" ]; then
-    echo "GTop: \"$PROGRAM\" is not running"
+  # get list of programs
+  PROGRAMS=""
+  for P in $@; do
+    PROGRAMS="$PROGRAMS $P"
+  done
+
+  PIDS=$(pidof $PROGRAMS | sed 's/[ |\n]/,/g')
+  if [ "${#PIDS}" -eq "0" ]; then
+    echo "gTop: No provided programs are running on this system"
     return 0
   fi
 
-  top -p `pgrep "$PROGRAM" | tr "\\n" "," | sed 's/,$//'`
+  top -p $PIDS
 }
