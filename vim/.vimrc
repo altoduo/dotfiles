@@ -110,6 +110,8 @@ colorscheme solarized
 
 "Recognize files as other files
 au BufNewFile,BufRead *.carbon set filetype=groovy
+au BufNewFile,BufRead *.pl set filetype=prolog
+au BufNewFile,BufRead *.pdb set filetype=prolog
 au BufNewFile,BufRead *.md set filetype=markdown
 
 "Set colorcolumn at 80 chars for python files only
