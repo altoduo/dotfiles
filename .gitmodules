@@ -34,3 +34,6 @@
 [submodule "vim/.vim/bundle/vim-markdown-preview"]
     path = vim/.vim/bundle/vim-markdown-preview
     url = git@github.com:JamshedVesuna/vim-markdown-preview.git
+[submodule "vim/.vim/bundle/vim-multiple-cursors"]
+	path = vim/.vim/bundle/vim-multiple-cursors
+	url = git@github.com:terryma/vim-multiple-cursors.git
