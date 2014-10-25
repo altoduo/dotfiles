@@ -154,6 +154,9 @@ set timeout timeoutlen=1000 ttimeoutlen=100
 "Mod for vim-signature
 set updatetime=100
 
+"Ctrlp
+let g:ctrlp_map = '<c-p>'
+
 "=========================
 "       Functions
 "=========================
