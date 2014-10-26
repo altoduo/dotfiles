@@ -13,8 +13,8 @@ mcd () { mkdir "$1" && cd "$1"; }
 
 # goto *any folder* Added support for any computer user
 goto () {
-    PRNAMES=".git .hg .svn .cache .cinnamon .atom .gnome .gnome2 .node-gyp .npm .pip .steam tmp temp"
-    PRPATHS="$HOME/builds $HOME/Library $HOME/Music $HOME/Pictures $HOME/Applications $HOME/Public"
+    PRNAMES=".git .hg .svn .cache .cinnamon .atom .gnome .gnome2 .node-gyp .npm .pip .steam tmp temp .ssh .config .vagrant.d .dropbox-dist .gimp-2.8 .ipython .local .m2"
+    PRPATHS="$HOME/builds $HOME/Library $HOME/Music $HOME/Pictures $HOME/Applications $HOME/Public "
 
     if [ "$OS" = "Darwin" ]; then
         updatedb --localpaths="$HOME" --prunepaths="$PRPATHS" --output="$HOME/.cache/goto.db"
