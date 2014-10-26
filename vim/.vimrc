@@ -196,6 +196,13 @@ map <F7> :call Shift_Right()<CR>
 set wildmenu
 inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
 
+function! Reach(lineno, cmd)
+  let currLine = line('.')
+  execute "normal! " . a:lineno . "G"
+  execute "normal! " . a:cmd
+  execute "normal! " . currLine . "G"
+endfunction
+
 
 "=========================
 "       Experimental
