@@ -105,8 +105,8 @@ set incsearch
 
 "Set color scheme
 syntax enable
-set background=dark
-colorscheme solarized
+"set background=dark
+colorscheme default
 
 "Recognize files as other files
 au BufNewFile,BufRead *.carbon set filetype=groovy
@@ -201,9 +201,9 @@ inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
 "       Experimental
 "=========================
 
-let g:solarized_contrast="high"
-let g:solarized_visibility="high"
-let g:solarized_hitrail=1
+"let g:solarized_contrast="high"
+"let g:solarized_visibility="high"
+"let g:solarized_hitrail=1
 set noswapfile
 "Auto buffer reads
 set autoread

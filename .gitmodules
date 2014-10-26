@@ -28,9 +28,6 @@
 [submodule "vim/.vim/bundle/vim-signature"]
     path = vim/.vim/bundle/vim-signature
     url = git@github.com:kshenoy/vim-signature.git
-[submodule "vim/.vim/bundle/vim-airline"]
-    path = vim/.vim/bundle/vim-airline
-    url = git@github.com:bling/vim-airline.git
 [submodule "vim/.vim/bundle/vim-markdown-preview"]
     path = vim/.vim/bundle/vim-markdown-preview
     url = git@github.com:JamshedVesuna/vim-markdown-preview.git
