@@ -148,8 +148,8 @@ set foldlevel=999
 let g:pymode_lint_write = 0
 
 "Mod for vim-airline
-set laststatus=2
-set timeout timeoutlen=1000 ttimeoutlen=100
+"set laststatus=2
+"set timeout timeoutlen=1000 ttimeoutlen=100
 
 "Mod for vim-signature
 set updatetime=100
