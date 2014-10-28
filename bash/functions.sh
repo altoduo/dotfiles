@@ -13,6 +13,13 @@ mcd () { mkdir "$1" && cd "$1"; }
 
 # goto *any folder* Added support for any computer user
 goto () {
+    # concatenate all further command line variables
+    FOLDER=""
+    for word in "$@"; do
+      FOLDER="$FOLDER $word"
+    done
+    FOLDER=${FOLDER:1}
+
     # get the prune names from the .gotoignore file if it exists
     PRNAMES=".git .hg .svn .cache .cinnamon .atom .gnome .gnome2 .node-gyp .npm .pip .steam .ssh .vagrant.d"
     if [ -e ~/.gotoignore ]; then
@@ -31,11 +38,13 @@ goto () {
     fi
 
     # and then search it
-    DIR=$(locate -d ~/.cache/goto.db -i "$1" | awk '{print length, $0}' | head -1 | sed 's/[0-9]*\s//')
-    if [ "$DIR" != "" ]; then
-        cd ${DIR}
+    DIR=$(locate -d ~/.cache/goto.db -i "$FOLDER" | awk '{print length, $0}' | head -1 | sed 's/[0-9]*\s//')
+
+    # only CD if the folder exists
+    if [ -d "$DIR" ]; then
+        cd "$DIR"
     else
-        echo "Couldn't find $1"
+        echo "Couldn't find $FOLDER"
     fi
 }
 
