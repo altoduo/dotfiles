@@ -13,14 +13,21 @@ mcd () { mkdir "$1" && cd "$1"; }
 
 # goto *any folder* Added support for any computer user
 goto () {
-    PRNAMES=".git .hg .svn .cache .cinnamon .atom .gnome .gnome2 .node-gyp .npm .pip .steam tmp temp .ssh .config .vagrant.d .dropbox-dist .gimp-2.8 .ipython .local .m2"
-    PRPATHS="$HOME/builds $HOME/Library $HOME/Music $HOME/Pictures $HOME/Applications $HOME/Public "
+    # get the prune names from the .gotoignore file if it exists
+    PRNAMES=".git .hg .svn .cache .cinnamon .atom .gnome .gnome2 .node-gyp .npm .pip .steam .ssh .vagrant.d"
+    if [ -e ~/.gotoignore ]; then
+      PRNAMES="$PRNAMES $(cat ~/.gotoignore | tr "\n" " ")"
+    fi
 
+    # for now, still ignore the precanned folders
+    PRPATHS="$HOME/builds $HOME/Library $HOME/Music $HOME/Pictures $HOME/Applications $HOME/Public"
+
+    # updatedb is different for mac than linux
     if [ "$OS" = "Darwin" ]; then
         updatedb --localpaths="$HOME" --prunepaths="$PRPATHS" --output="$HOME/.cache/goto.db"
     else
         # update the database
-        updatedb --prunenames="$PRNAMES" --prunepaths="$PRPATHS" -l 0 -U ~/ -o ~/.cache/goto.db
+        updatedb --prunenames "$PRNAMES" --prunepaths "$PRPATHS" -l 0 -U ~/ -o ~/.cache/goto.db
     fi
 
     # and then search it
