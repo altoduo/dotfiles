@@ -136,3 +136,18 @@ gtop() {
 
   top -p $PIDS
 }
+
+
+# If Dropbox is installed, copy a public url to the given file
+puburl() {
+  if ! type "dropbox" > /dev/null; then
+    echo "You don't have Dropbox installed"
+  else
+    DROPBOXPATH=~/Dropbox/Public
+    cp -r $1 $DROPBOXPATH
+    PUBPATH=$(dropbox puburl $DROPBOXPATH/$1)
+    echo $PUBPATH | xclip -selection clipboard
+    echo "The following has been copied to your Public Folder:" $1
+    echo "Public URL:" $PUBPATH
+  fi
+}
