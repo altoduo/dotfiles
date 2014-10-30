@@ -137,7 +137,6 @@ gtop() {
   top -p $PIDS
 }
 
-
 # If Dropbox is installed, copy a public url to the given file
 puburl() {
   if ! type "dropbox" > /dev/null; then
@@ -150,4 +149,16 @@ puburl() {
     echo "The following has been copied to your Public Folder:" $1
     echo "Public URL:" $PUBPATH
   fi
+}
+
+# runs an application, piping its output to /dev/null and forks to background
+launch() {
+  # concatenate all further command line variables
+  COMMAND=""
+  for word in "$@"; do
+    COMMAND="$COMMAND $word"
+  done
+  COMMAND=${COMMAND:1}
+
+  $COMMAND &> /dev/null &
 }
