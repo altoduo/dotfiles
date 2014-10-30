@@ -43,8 +43,9 @@ set pastetoggle=<F5>
 "Automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
 
-"Adds '-' to one word autocomplete
+"Adds '-' to one word autocomplete, except *.c files
 set iskeyword+=-
+autocmd FileType c set iskeyword-=-
 
 "Display endline whitespace
 set listchars=tab:▸\ ,trail:¤
