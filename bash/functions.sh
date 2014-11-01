@@ -160,5 +160,8 @@ launch() {
   done
   COMMAND=${COMMAND:1}
 
-  $COMMAND &> /dev/null &
+  $COMMAND </dev/null &> /dev/null &
+
+  # disown newly forked child
+  disown
 }
