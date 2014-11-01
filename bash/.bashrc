@@ -88,7 +88,7 @@ if [ -x "/usr/bin/dircolors" ] || [ "$OS" = "Darwin" ]; then
 fi
 
 # General aliases
-alias cddot='cd $AWESOME_PATH'
+alias cddot='cd "${AWESOME_PATH}"'
 alias bashrc="$EDITOR $AWESOME_PATH/bash/.bashrc"
 alias vimrc="$EDITOR $AWESOME_PATH/vim/.vimrc"
 alias vi='vim'
