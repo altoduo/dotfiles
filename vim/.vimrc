@@ -129,7 +129,7 @@ execute pathogen#infect()
 filetype plugin on
 
 "Toggle the NERD Tree
-map <C-n> :NERDTreeToggle<CR>
+map <Leader>n :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 
 "Auto-comment
