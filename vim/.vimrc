@@ -32,7 +32,6 @@ autocmd Filetype python set expandtab tabstop=4 shiftwidth=4
 "Text wrap
 set wrap
 set linebreak
-set nolist
 
 "Copy/Paste integration with system
 set clipboard=unnamed
@@ -89,10 +88,6 @@ set title
 "         Colors
 "=========================
 
-"Current Line Visuals (Highlighting)
-"set cul
-"hi CursorLine term=none cterm=none ctermbg=0
-
 "Set syntax highlighting on"
 syntax on
 
@@ -100,12 +95,9 @@ syntax on
 set hlsearch
 set incsearch
 
-"Display the file name at the bottom
-"set modeline
-"set ls=2
-
 "Set color scheme
 syntax enable
+
 "set background=dark
 colorscheme default
 
@@ -135,22 +127,15 @@ let NERDTreeShowHidden=1
 "Auto-comment
 map <C-c> <leader>c<space>
 
-"Search and replace visually selcted text with <Crt-r> (y/n)
+"Search and replace visually selcted text with <Ctr-r> (y/n)
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
 "Deselect search highlighting
 map <Leader><Space> :noh<CR>
 
-"<F9> to execute current buffer with python
-nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
-
 "Mods for PyMode
 set foldlevel=999
 let g:pymode_lint_write = 0
-
-"Mod for vim-airline
-"set laststatus=2
-"set timeout timeoutlen=1000 ttimeoutlen=100
 
 "Mod for vim-signature
 set updatetime=100
@@ -197,6 +182,15 @@ map <F7> :call Shift_Right()<CR>
 set wildmenu
 inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
 
+"=========================
+"       Experimental
+"=========================
+
+set noswapfile
+
+"Auto buffer reads
+set autoread
+
 function! Reach(lineno, cmd)
   let currLine = line('.')
   execute "normal! " . a:lineno . "G"
@@ -205,13 +199,3 @@ function! Reach(lineno, cmd)
 endfunction
 
 
-"=========================
-"       Experimental
-"=========================
-
-"let g:solarized_contrast="high"
-"let g:solarized_visibility="high"
-"let g:solarized_hitrail=1
-set noswapfile
-"Auto buffer reads
-set autoread
