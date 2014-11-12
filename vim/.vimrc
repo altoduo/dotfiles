@@ -143,6 +143,11 @@ set updatetime=100
 "Ctrlp
 let g:ctrlp_map = '<c-p>'
 
+
+"VMath shortcut
+vmap <expr> ++ VMATH_YankAndAnalyse()
+nmap ++ vip++
+
 "=========================
 "       Functions
 "=========================
