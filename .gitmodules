@@ -34,3 +34,6 @@
 [submodule "vim/.vim/bundle/vim-vmath"]
 	path = vim/.vim/bundle/vim-vmath
 	url = git@github.com:DavidGamba/vim-vmath.git
+[submodule "vim/.vim/bundle/vim-exchange"]
+	path = vim/.vim/bundle/vim-exchange
+	url = git://github.com/tommcdo/vim-exchange.git
