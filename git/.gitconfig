@@ -19,6 +19,7 @@
     hlog = log --date-order --all --graph --format=\"%C(green)%H%Creset %C(yellow)%an%Creset %C(blue bold)%ar%Creset %C(red bold)%d%Creset%s\"
     d = diff --color-words
     cfiles = diff-tree --no-commit-id --name-only -r HEAD~1
+    sm = "!git submodule update --init --recursive; git submodule foreach git pull origin master"
 [core]
     pager = less -FrX --ignore-case
 [color]
