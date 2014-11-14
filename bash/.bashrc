@@ -100,6 +100,7 @@ alias xpbpaste='xclip -selection clipboard -o'
 alias pbc='cat $1 | pbcopy'
 alias xpbc='cat $1 | xpbcopy'
 alias tailf='tail -f'
+alias ccat='vimcat'
 
 # ls/cd aliases
 alias cd='cdmagic'
