@@ -1,3 +1,14 @@
+#!/bin/bash
+
+echo "Warning: This will add symlinks your config files!"
+read -r -p "Are you sure [y/N] " response
+case $response in
+  [yY])
+    ;;
+  *)
+    exit
+esac
+
 ln -s ~/scripts/dotfiles/bash/.bashrc ~/.bashrc
 ln -s ~/scripts/dotfiles/vim/.vimrc ~/.vimrc
 ln -s ~/scripts/dotfiles/vim/.vim/ ~/.vim
