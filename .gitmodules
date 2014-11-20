@@ -1,6 +1,6 @@
 [submodule "nerdtree"]
     path = vim/.vim/bundle/nerdtree
-    url = git://github.com/scrooloose/nerdtree.git
+    url = https://github.com/scrooloose/nerdtree.git
 [submodule "vim/.vim/bundle/syntastic"]
     path = vim/.vim/bundle/syntastic
     url = https://github.com/scrooloose/syntastic.git
@@ -12,28 +12,28 @@
     url = https://github.com/tpope/vim-repeat.git
 [submodule "vim/.vim/bundle/fugitive"]
     path = vim/.vim/bundle/fugitive
-    url = git@github.com:tpope/vim-fugitive.git
+    url = https://github.com/tpope/vim-fugitive.git
 [submodule "vim/.vim/bundle/python-mode"]
     path = vim/.vim/bundle/python-mode
-    url = git@github.com:klen/python-mode.git
+    url = https://github.com/klen/python-mode.git
 [submodule "vim/.vim/bundle/nerdcommenter"]
     path = vim/.vim/bundle/nerdcommenter
-    url = git@github.com:scrooloose/nerdcommenter.git
+    url = https://github.com/scrooloose/nerdcommenter.git
 [submodule "vim/.vim/bundle/vim-signature"]
     path = vim/.vim/bundle/vim-signature
-    url = git@github.com:kshenoy/vim-signature.git
+    url = https://github.com/kshenoy/vim-signature.git
 [submodule "vim/.vim/bundle/vim-markdown-preview"]
     path = vim/.vim/bundle/vim-markdown-preview
-    url = git@github.com:JamshedVesuna/vim-markdown-preview.git
+    url = https://github.com/JamshedVesuna/vim-markdown-preview.git
 [submodule "vim/.vim/bundle/vim-multiple-cursors"]
-	path = vim/.vim/bundle/vim-multiple-cursors
-	url = git@github.com:terryma/vim-multiple-cursors.git
+    path = vim/.vim/bundle/vim-multiple-cursors
+    url = https://github.com/terryma/vim-multiple-cursors.git
 [submodule "vim/.vim/bundle/ctrlp"]
-	path = vim/.vim/bundle/ctrlp
-	url = git@github.com:kien/ctrlp.vim.git
+    path = vim/.vim/bundle/ctrlp
+    url = https://github.com/kien/ctrlp.vim.git
 [submodule "vim/.vim/bundle/vim-vmath"]
-	path = vim/.vim/bundle/vim-vmath
-	url = git@github.com:DavidGamba/vim-vmath.git
+    path = vim/.vim/bundle/vim-vmath
+    url = https://github.com/DavidGamba/vim-vmath.git
 [submodule "vim/.vim/bundle/vim-exchange"]
-	path = vim/.vim/bundle/vim-exchange
-	url = git://github.com/tommcdo/vim-exchange.git
+    path = vim/.vim/bundle/vim-exchange
+    url = https://github.com/tommcdo/vim-exchange.git
