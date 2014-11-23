@@ -11,7 +11,7 @@
 [ -z "$PS1" ] && return
 
 # import bash_colors script
-source "$AWESOME_PATH/bash/bash_colors"
+source "$DOTFILES_PATH/bash/bash_colors"
 
 # Prompt - check if git-prompt.sh exists first
 fancy_ps1="\[${BGreen}\]\u \[${Blue}\]\w\[${Yellow}\]\$(__git_ps1) \[${Red}\]\$ \[${Color_Off}\]"
@@ -31,7 +31,7 @@ fi
 #   Functions   #
 #################
 
-source "$AWESOME_PATH/bash/functions.sh"
+source "$DOTFILES_PATH/bash/functions.sh"
 
 #################
 #   Variables  #
@@ -85,9 +85,9 @@ if [ -x "/usr/bin/dircolors" ] || [ "$OS" = "Darwin" ]; then
 fi
 
 # General aliases
-alias cddot='cd "${AWESOME_PATH}"'
-alias bashrc="$EDITOR $AWESOME_PATH/bash/.bashrc"
-alias vimrc="$EDITOR $AWESOME_PATH/vim/.vimrc"
+alias cddot='cd "$DOTFILES_PATH"'
+alias bashrc="$EDITOR $DOTFILES_PATH/bash/.bashrc"
+alias vimrc="$EDITOR $DOTFILES_PATH/vim/.vimrc"
 alias vi='vim'
 alias cl='clear'
 alias shutoff='sudo shutdown now'
