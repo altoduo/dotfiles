@@ -114,7 +114,7 @@ alias k='\cd .. && l'
 
 # File aliases
 alias sizeof="du -sch"
-alias untar='tar -zcvf'
+alias untar='tar -zxvf'
 
 # Program aliases
 alias p='python'
