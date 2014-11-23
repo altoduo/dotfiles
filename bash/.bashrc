@@ -19,17 +19,12 @@ export PS1=${fancy_ps1}
 
 simple_ps1="\[${BGreen}\]\u \[${Blue}\]\w \[${Red}\]\$ \[${Color_Off}\]"
 
-# import git-prompt
-if [ -e "/usr/share/git/git-prompt.sh" ]; then
-    source "/usr/share/git/git-prompt.sh"
-elif [ -e "/usr/share/git/completion/git-prompt.sh" ]; then
-    source "/usr/share/git/completion/git-prompt.sh"
-elif [ -e "/usr/local/etc/bash_completion" ]; then
-    source "/usr/local/etc/bash_completion"
-elif [ -e "/etc/bash_completion.d/git-prompt" ]; then
-    source "/etc/bash_completion.d/git-prompt"
+# check if __git_ps1 exists
+command -v __git_ps1 &> /dev/null
+if [ $? -eq 0 ]; then
+  PS1=$fancy_ps1
 else
-    export PS1=${simple_ps1}
+  PS1=$simple_ps1
 fi
 
 #################
