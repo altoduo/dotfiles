@@ -37,3 +37,6 @@
 [submodule "vim/.vim/bundle/vim-exchange"]
     path = vim/.vim/bundle/vim-exchange
     url = https://github.com/tommcdo/vim-exchange.git
+[submodule "vim/.vim/bundle/TaskList.vim"]
+	path = vim/.vim/bundle/TaskList.vim
+	url = https://github.com/vim-scripts/TaskList.vim
