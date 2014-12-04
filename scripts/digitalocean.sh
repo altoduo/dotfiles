@@ -98,6 +98,8 @@ if [ "$DELETE" -eq 1 ]; then
 
       echo
       echo
+      echo "Successfully deleted droplet!"
+      echo
       exit
 fi
 
