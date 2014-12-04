@@ -23,3 +23,6 @@ __pycache__
 
 # vim stuff
 .netrwhist
+
+# Personal Environment Variables
+altovars.config
