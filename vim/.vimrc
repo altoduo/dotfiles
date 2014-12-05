@@ -26,6 +26,7 @@ set shiftwidth=2
 set smarttab
 set autoindent
 set softtabstop=2
+filetype plugin indent on
 autocmd FileType make setlocal noexpandtab tabstop=4 shiftwidth=4
 autocmd Filetype python set expandtab tabstop=4 shiftwidth=4
 
