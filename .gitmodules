@@ -40,3 +40,6 @@
 [submodule "vim/.vim/bundle/TaskList.vim"]
     path = vim/.vim/bundle/TaskList.vim
     url = https://github.com/altoduo/TaskList.vim.git
+[submodule "vim/.vim/bundle/vim-puppet"]
+    path = vim/.vim/bundle/vim-puppet
+    url = https://github.com/rodjek/vim-puppet.git
