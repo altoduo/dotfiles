@@ -6,15 +6,16 @@
 #             Setup Script                 #
 ############################################
 
+git submodule sync
+git submodule update --init --recursive
+git submodule foreach git pull origin master
+
 if [ "$DOTFILES_PATH" != "" ]; then
   exit
 fi
 
 DOTDIR="dirname $( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 echo "Using $($DOTDIR) as the location for altoduo's dotfiles"
-
-git submodule update --init --recursive
-git submodule foreach git pull origin master
 
 if [ -f ~/.bashrc ]
   then
