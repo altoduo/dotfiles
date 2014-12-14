@@ -6,6 +6,10 @@
 #             Setup Script                 #
 ############################################
 
+if [ "$DOTFILES_PATH" != "" ]; then
+  exit
+fi
+
 DOTDIR="dirname $( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 echo "Using $($DOTDIR) as the location for altoduo's dotfiles"
 
