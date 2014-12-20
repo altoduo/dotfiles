@@ -204,4 +204,4 @@ function! Reach(lineno, cmd)
   execute "normal! " . currLine . "G"
 endfunction
 
-
+:nnoremap <F1> :buffers<CR>:buffer<Space>
