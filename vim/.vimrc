@@ -85,6 +85,12 @@ command! Q q
 "Set the terminal's title when using vim
 set title
 
+"F1 displays buffers. Type the buf number to go there
+nnoremap <F1> :buffers<CR>:buffer<Space>
+
+"Set path to current dir, current dir containing file, recursively.
+set path=.,,**
+
 "=========================
 "         Colors
 "=========================
@@ -204,4 +210,3 @@ function! Reach(lineno, cmd)
   execute "normal! " . currLine . "G"
 endfunction
 
-:nnoremap <F1> :buffers<CR>:buffer<Space>
