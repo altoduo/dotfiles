@@ -165,15 +165,3 @@ launch() {
   # disown newly forked child
   disown
 }
-
-# Color coded man pages
-man() {
-  env LESS_TERMCAP_mb=$(tput blink) \
-    LESS_TERMCAP_md=$(tput bold; tput setaf 7) \
-    LESS_TERMCAP_me=$(tput sgr0) \
-    LESS_TERMCAP_se=$(tput sgr0) \
-    LESS_TERMCAP_so=$(tput setaf 1) \
-    LESS_TERMCAP_ue=$(tput sgr0) \
-    LESS_TERMCAP_us=$(tput smul; tput setaf 6) \
-  man "$@"
-}
