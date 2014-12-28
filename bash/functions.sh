@@ -168,12 +168,12 @@ launch() {
 
 # Color coded man pages
 man() {
-    env LESS_TERMCAP_mb=$'\E[01;31m' \
-    LESS_TERMCAP_md=$'\E[01;38;5;74m' \
-    LESS_TERMCAP_me=$'\E[0m' \
-    LESS_TERMCAP_se=$'\E[0m' \
-    LESS_TERMCAP_so=$'\E[38;5;246m' \
-    LESS_TERMCAP_ue=$'\E[0m' \
-    LESS_TERMCAP_us=$'\E[04;38;5;146m' \
-    man "$@"
+  env LESS_TERMCAP_mb=$(tput blink) \
+    LESS_TERMCAP_md=$(tput bold; tput setaf 7) \
+    LESS_TERMCAP_me=$(tput sgr0) \
+    LESS_TERMCAP_se=$(tput sgr0) \
+    LESS_TERMCAP_so=$(tput setaf 1) \
+    LESS_TERMCAP_ue=$(tput sgr0) \
+    LESS_TERMCAP_us=$(tput smul; tput setaf 6) \
+  man "$@"
 }
