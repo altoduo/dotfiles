@@ -37,12 +37,12 @@
 [submodule "vim/.vim/bundle/vim-exchange"]
     path = vim/.vim/bundle/vim-exchange
     url = https://github.com/tommcdo/vim-exchange.git
-[submodule "vim/.vim/bundle/TaskList.vim"]
-    path = vim/.vim/bundle/TaskList.vim
-    url = https://github.com/altoduo/TaskList.vim.git
 [submodule "vim/.vim/bundle/vim-puppet"]
     path = vim/.vim/bundle/vim-puppet
     url = https://github.com/rodjek/vim-puppet.git
 [submodule "vim/.vim/bundle/vim-javascript"]
 	path = vim/.vim/bundle/vim-javascript
 	url = https://github.com/pangloss/vim-javascript.git
+[submodule "vim/.vim/bundle/Todo.vim"]
+	path = vim/.vim/bundle/Todo.vim
+	url = https://github.com/DepthDeluxe/Todo.vim
