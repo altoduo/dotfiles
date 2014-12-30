@@ -169,16 +169,10 @@ function! Tab_Or_Complete()
 endfunction
 
 "Shortcut for changing vertical window size
-function! Bigger_V_Window()
-  :vertical resize +2
-endfunction
-
-function! Smaller_V_Window()
-  :vertical resize -2
-endfunction
-
-map <F3> :call Bigger_V_Window()<CR>
-map <F2> :call Smaller_V_Window()<CR>
+map <F3> :vertical resize +2<CR>
+map <F2> :vertical resize -2<CR>
+map <F9> :resize -2<CR>
+map <F10> :resize +2<CR>
 
 function! Shift_Left()
     execute ':normal v|<'
