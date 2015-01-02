@@ -122,6 +122,7 @@ alias sizeof="du -sch"
 alias untar='tar -zxvf'
 
 # Program aliases
+alias r='ruby'
 alias p='python'
 alias m='make'
 alias c='gcc'
