@@ -91,6 +91,9 @@ nnoremap <F1> :buffers<CR>:buffer<Space>
 "Set path to current dir, current dir containing file, recursively.
 set path=.,,**
 
+"Auto buffer reads
+set autoread
+
 "=========================
 "         Colors
 "=========================
@@ -193,14 +196,3 @@ inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
 "=========================
 
 set noswapfile
-
-"Auto buffer reads
-set autoread
-
-function! Reach(lineno, cmd)
-  let currLine = line('.')
-  execute "normal! " . a:lineno . "G"
-  execute "normal! " . a:cmd
-  execute "normal! " . currLine . "G"
-endfunction
-
