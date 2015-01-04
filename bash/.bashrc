@@ -3,6 +3,12 @@
 #   git@github.com:altoduo/dotfiles.git    #
 ############################################
 
+#######################
+#    Configuration    #
+#######################
+
+#export LIGHT_COLORSCHEME=1
+
 #################
 #    Colors     #
 #################
@@ -29,13 +35,15 @@ fi
 
 # less colored highlighting options,
 # used for `man`
-export LESS_TERMCAP_mb=$(tput blink)
-export LESS_TERMCAP_md=$(tput bold; tput setaf 7)
-export LESS_TERMCAP_me=$(tput sgr0)
-export LESS_TERMCAP_se=$(tput sgr0)
-export LESS_TERMCAP_so=$(tput setaf 1)
-export LESS_TERMCAP_ue=$(tput sgr0)
-export LESS_TERMCAP_us=$(tput smul; tput setaf 6)
+if [ -z "$LIGHT_COLORSCHEME" ]; then
+  export LESS_TERMCAP_mb=$(tput sgr0)
+  export LESS_TERMCAP_md=$(tput bold; tput sgr0 )
+  export LESS_TERMCAP_me=$(tput sgr0)
+  export LESS_TERMCAP_se=$(tput sgr0)
+  export LESS_TERMCAP_so=$(tput sgr0 1)
+  export LESS_TERMCAP_ue=$(tput sgr0)
+  export LESS_TERMCAP_us=$(tput sgr0; tput sgr0 1)
+fi
 
 #################
 #   Functions   #
