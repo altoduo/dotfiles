@@ -5,6 +5,9 @@
 #   git@github.com:altoduo/dotfiles.git    #
 ############################################
 
+# Let's ease into the transition
+{source ~/.bashrc 2>&1} > /dev/null
+
 # Autotab
 autoload -U compinit
 compinit

@@ -106,6 +106,7 @@ fi
 alias cddot='cd "$DOTFILES_PATH"'
 alias bashrc="$EDITOR $DOTFILES_PATH/bash/.bashrc"
 alias vimrc="$EDITOR $DOTFILES_PATH/vim/.vimrc"
+alias zshrc="vim $DOTFILES_PATH/zsh/.zshrc"
 alias vi='vim'
 alias cl='clear'
 alias shutoff='sudo shutdown now'
