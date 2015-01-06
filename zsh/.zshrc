@@ -7,6 +7,9 @@
 
 # Let's ease into the transition
 {source ~/.bashrc 2>&1} > /dev/null
+PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD/$HOME/~}\007"'
+unalias cd
+alias k="cd .."
 
 # Autotab
 autoload -U compinit
@@ -21,7 +24,9 @@ setopt correctall
 autoload -U promptinit
 promptinit
 prompt suse
-export PS1="%n.%m %~ > "
+autoload -U colors && colors
+#export PS1="%{$fg[red]%}%n.%{$reset_color%}%m %C > "
+PROMPT="%{$fg[blue]%}%n%{$resetcolor%}.%{$fg[green]%}%m%{$resetcolor%} %{$fg[cyan]%}%c%{$resetcolor%} > %{$fg[black]%}"
 
 
 # History
@@ -34,6 +39,10 @@ setopt hist_ignore_space  # Don't record entries preceeded with a space
 
 # Auto cd: name the dir
 setopt autocd
+function chpwd() {
+    emulate -L zsh
+    ls -a
+}
 
 # Extended glob includes regex
 setopt extendedglob
