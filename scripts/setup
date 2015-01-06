@@ -61,3 +61,12 @@ elif [ ! -f ~/.gitconfig ]
     echo "[include]" > ~/.gitconfig
     echo "  path = $($DOTDIR)/git/.gitconfig" >> ~/.gitconfig
 fi
+
+if [ -f ~/.zshrc ]
+  then
+    echo "source \$DOTFILES_PATH/zsh/.zshrc" >> ~/.zshrc
+elif [ ! -f ~/.zshrc ]
+  then
+    echo "source \$DOTFILES_PATH/zsh/.zshrc" > ~/.zshrc
+fi
+
