@@ -52,6 +52,14 @@ elif [ ! -d ~/.vim ]
     ln -s $($DOTDIR)/vim/.vim ~/.vim
 fi
 
+if [ -f ~/.gvimrc ]
+  then
+    echo "source \$DOTFILES_PATH/vim/.gvimrc" >> ~/.gvimrc
+elif [ ! -f ~/.gvimrc ]
+  then
+    echo "source \$DOTFILES_PATH/vim/.gvimrc" > ~/.gvimrc
+fi
+
 if [ -f ~/.gitconfig ]
   then
     echo "[include]" >> ~/.gitconfig
