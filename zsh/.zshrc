@@ -19,6 +19,7 @@ compinit
 zstyle ':completion:*:descriptions' format '%U%B%d%b%u'
 #zstyle ':completion:*:warnings' format '%BSorry, no matches for: %d%b'
 setopt correctall
+unsetopt correct_all
 
 # Prompt
 autoload -U promptinit
@@ -28,6 +29,8 @@ autoload -U colors && colors
 #export PS1="%{$fg[red]%}%n.%{$reset_color%}%m %C > "
 PROMPT="%{$fg[blue]%}%n%{$resetcolor%}.%{$fg[green]%}%m%{$resetcolor%} %{$fg[cyan]%}%c%{$resetcolor%} > %{$fg[black]%}"
 
+# Colors
+export CLICOLOR=YES  # Works on OSX
 
 # History
 export HISTSIZE=2000
@@ -41,7 +44,7 @@ setopt hist_ignore_space  # Don't record entries preceeded with a space
 setopt autocd
 function chpwd() {
     emulate -L zsh
-    ls -a
+    ls #-a
 }
 
 # Extended glob includes regex
