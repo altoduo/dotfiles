@@ -198,3 +198,4 @@ inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
 set noswapfile
 "autocmd StdinReadPre * let s:std_in=1
 "autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+let NERDTreeShowBookmarks=1
