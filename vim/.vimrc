@@ -17,7 +17,7 @@ nnoremap ; :
 filetype on
 
 "Bracket auto complete
-inoremap {<Enter> {<CR>.<CR>}<Esc>ki<TAB><DEL>
+inoremap {<Enter> {<CR><CR>}<Esc>kk<CR>i<TAB>
 
 "Tabbing and Indenting
 set tabstop=2
