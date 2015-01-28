@@ -49,6 +49,7 @@ autocmd FileType c set iskeyword-=-
 
 "Display endline whitespace
 set listchars=tab:▸\ ,trail:¤
+autocmd FileType text set listchars=
 set list
 
 "Place vim temp files somewhere else
