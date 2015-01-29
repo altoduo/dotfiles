@@ -72,6 +72,9 @@ map <C-L> <C-W>l<C-W>
 map <C-J> <C-W>j<C-W>
 map <C-K> <C-W>k<C-W>
 
+" Todo map
+nnoremap <Leader>t :Todo<CR>
+
 "Put new buffers on the right of and below the current buffter
 set splitright
 set splitbelow
