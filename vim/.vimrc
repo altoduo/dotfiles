@@ -156,6 +156,7 @@ set updatetime=100
 
 "Ctrlp
 let g:ctrlp_map = '<c-p>'
+nnoremap <C-i> :CtrlPTag<CR>
 
 
 "VMath shortcut
