@@ -41,8 +41,11 @@
     path = vim/.vim/bundle/vim-puppet
     url = https://github.com/rodjek/vim-puppet.git
 [submodule "vim/.vim/bundle/vim-javascript"]
-	path = vim/.vim/bundle/vim-javascript
-	url = https://github.com/pangloss/vim-javascript.git
+    path = vim/.vim/bundle/vim-javascript
+    url = https://github.com/pangloss/vim-javascript.git
 [submodule "vim/.vim/bundle/Todo.vim"]
-	path = vim/.vim/bundle/Todo.vim
-	url = https://github.com/DepthDeluxe/Todo.vim
+    path = vim/.vim/bundle/Todo.vim
+    url = https://github.com/DepthDeluxe/Todo.vim
+[submodule "vim/.vim/bundle/vim-scala"]
+    path = vim/.vim/bundle/vim-scala
+    url = https://github.com/derekwyatt/vim-scala.git
