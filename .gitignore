@@ -27,3 +27,6 @@ vim/.vim/spell
 
 # Personal Environment Variables
 altovars.config
+
+# Stored API Passwords and Secrets
+*.cronos
