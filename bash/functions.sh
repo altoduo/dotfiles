@@ -137,17 +137,26 @@ gtop() {
   top -p $PIDS
 }
 
-# If Dropbox is installed, copy a public url to the given file
+# After running $DOTFILES_PATH/scripts/dropbox_share.py and entering your
+# credentials, puburl() will put a file in ~/Dropbox/Public and copy the
+# public url to your clipboard
 puburl() {
-  if ! type "dropbox" > /dev/null; then
-    echo "You don't have Dropbox installed"
-  else
-    DROPBOXPATH=~/Dropbox/Public
-    cp -r $1 $DROPBOXPATH
-    PUBPATH=$(dropbox puburl $DROPBOXPATH/$1)
-    echo $PUBPATH | xclip -selection clipboard
-    echo "The following has been copied to your Public Folder:" $1
-    echo "Public URL:" $PUBPATH
+  if [ $# != 1 ]; then
+    echo 'usage: puburl [file | directory]'
+    return 0
+  fi
+  CURR_PATH=`pwd`
+  SCRIPTS_PATH=$DOTFILES_PATH/scripts
+  cd $SCRIPTS_PATH > /dev/null
+  PUBURL=`python dropbox_share.py $CURR_PATH/$1`
+  echo $PUBURL
+  cd $CURR_PATH > /dev/null
+  platform='unknown'
+  unamestr=`uname`
+  if [[ "$unamestr" == 'Linux' ]]; then
+    echo $PUBURL | xclip -selection clipboard
+  elif [[ "$unamestr" == 'Darwin' ]]; then
+    echo $PUBURL | pbcopy
   fi
 }
 
