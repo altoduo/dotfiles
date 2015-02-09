@@ -196,6 +196,18 @@ map <F7> :call Shift_Right()<CR>
 set wildmenu
 inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
 
+"Requires pdflatex; Recommended BasicTeX
+function! Latex_To_PDF()
+  let curr_file = expand('%:p')
+  let filename = expand('%:t:r')
+  call system('pdflatex ' . curr_file)
+  call system('open -g ' . filename . '.pdf')
+  call system('rm ' . filename . '.log ' . filename . '*.aux')
+endfunction
+
+autocmd Filetype tex map <buffer> <C-p> :call Latex_To_PDF()<CR>
+
+
 "=========================
 "       Experimental
 "=========================
