@@ -60,3 +60,6 @@ function command_not_found_handler()
     emulate -L zsh
     for file in $@ ; do test -e $file && vim $file:A ; done
 }
+
+bindkey    "^[[3~"          delete-char
+bindkey    "^[3;5~"         delete-char
