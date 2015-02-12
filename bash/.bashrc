@@ -72,7 +72,7 @@ shopt -s cdspell
 shopt -s nocaseglob
 
 #Set editor and visual variable
-set -o vi
+set -o emacs
 export EDITOR=vim
 export GIT_EDITOR=vim
 export VISUAL=vim
