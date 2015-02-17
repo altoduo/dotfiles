@@ -218,3 +218,21 @@ set noswapfile
 let NERDTreeShowBookmarks=1
 set tags=./tags;/
 set complete=.,t
+
+
+let g:EasyMotion_do_mapping = 0 " Disable default mappings
+
+" Bi-directional find motion
+" Jump to anywhere you want with minimal keystrokes, with just one key binding.
+" `s{char}{label}`
+nmap <Space> <Plug>(easymotion-s)
+" or
+" `s{char}{char}{label}`
+" Need one more keystroke, but on average, it may be more comfortable.
+nmap <Space> <Plug>(easymotion-s2)
+
+" JK motions: Line motions
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+" Turn on case insensitive feature
+let g:EasyMotion_smartcase = 1
