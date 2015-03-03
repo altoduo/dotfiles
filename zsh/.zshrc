@@ -27,7 +27,7 @@ promptinit
 prompt suse
 autoload -U colors && colors
 #export PS1="%{$fg[red]%}%n.%{$reset_color%}%m %C > "
-PROMPT="%{$fg[blue]%}%n%{$resetcolor%}.%{$fg[green]%}%m%{$resetcolor%} %{$fg[cyan]%}%c%{$resetcolor%} > %{$fg[white]%}"
+PROMPT="%{$fg[blue]%}%n%{$resetcolor%}.%{$fg[green]%}%m%{$resetcolor%} %{$fg[cyan]%}%c%{$resetcolor%} > "
 
 # VCS Info module
 autoload -Uz vcs_info
@@ -59,10 +59,3 @@ setopt extendedglob
 
 bindkey    "^[[3~"          delete-char
 bindkey    "^[3;5~"         delete-char
-
-# Autovim: name the file
-function command_not_found_handler()
-{
-    emulate -L zsh
-    for file in $@ ; do test -e $file && vim $file:A ; done
-}
