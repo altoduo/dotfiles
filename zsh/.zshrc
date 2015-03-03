@@ -27,7 +27,7 @@ promptinit
 prompt suse
 autoload -U colors && colors
 #export PS1="%{$fg[red]%}%n.%{$reset_color%}%m %C > "
-PROMPT="%{$fg[blue]%}%n%{$resetcolor%}.%{$fg[green]%}%m%{$resetcolor%} %{$fg[cyan]%}%c%{$resetcolor%} > "
+PROMPT="%{$fg[blue]%}%n%{$resetcolor%}.%{$fg[green]%}%m%{$resetcolor%} %{$fg[cyan]%}%c%{$resetcolor%} >$reset_color "
 
 # VCS Info module
 autoload -Uz vcs_info
