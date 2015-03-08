@@ -133,7 +133,7 @@ alias untar='tar -zxvf'
 # Program aliases
 alias r='ruby'
 alias p='python'
-alias ip='ipython --no-confirm-exit'
+alias ipy='ipython --no-confirm-exit'
 alias m='make'
 alias c='gcc'
 alias j='java'
