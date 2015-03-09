@@ -34,6 +34,7 @@ autoload -Uz vcs_info
 
 # Colors
 export CLICOLOR=YES  # Works on OSX
+source $DOTFILES_PATH/zsh/colored-man.zsh
 
 # History
 export HISTSIZE=2000
