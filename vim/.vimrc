@@ -236,3 +236,6 @@ map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 " Turn on case insensitive feature
 let g:EasyMotion_smartcase = 1
+
+"Fixes O delay, see :set termcap
+set timeout timeoutlen=5000 ttimeoutlen=100
