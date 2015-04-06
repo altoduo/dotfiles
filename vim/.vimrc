@@ -182,17 +182,6 @@ map <F2> :vertical resize -2<CR>
 map <F9> :resize -2<CR>
 map <F10> :resize +2<CR>
 
-function! Shift_Left()
-    execute ':normal v|<'
-endfunction
-
-function! Shift_Right()
-    execute ':normal v|>'
-endfunction
-
-map <F6> :call Shift_Left()<CR>
-map <F7> :call Shift_Right()<CR>
-
 set wildmenu
 inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
 
