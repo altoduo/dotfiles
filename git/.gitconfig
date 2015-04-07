@@ -5,7 +5,9 @@
 [push]
     default = upstream
 [branch]
-    autosetuprebase = always
+  autosetuprebase = always
+[merge]
+  conflictstyle = diff3
 [alias]
     pullr = pull -r
     ci = commit
