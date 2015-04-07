@@ -12,6 +12,7 @@ set number
 
 "Mappings
 nnoremap ; :
+nnoremap <Space> ;
 
 "Filetype on
 filetype on
