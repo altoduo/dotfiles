@@ -164,6 +164,9 @@ nnoremap <C-i> :CtrlPTag<CR>
 vmap <expr> ++ VMATH_YankAndAnalyse()
 nmap ++ vip++
 
+"Vim-json show quotes
+let g:vim_json_syntax_conceal = 0
+
 "=========================
 "       Functions
 "=========================
