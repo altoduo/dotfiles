@@ -138,6 +138,7 @@ filetype plugin on
 "Toggle the NERD Tree
 map <Leader>n :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
+let NERDTreeMinimalUI=1
 
 "Auto-comment
 map <C-c> <leader>c<space>
