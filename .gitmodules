@@ -51,10 +51,10 @@
     url = https://github.com/derekwyatt/vim-scala.git
 [submodule "vim/.vim/bundle/vim-go"]
     path = vim/.vim/bundle/vim-go
-    url = git@github.com:fatih/vim-go.git
+    url = https://github.com/fatih/vim-go.git
 [submodule "vim/.vim/bundle/vim-json"]
     path = vim/.vim/bundle/vim-json
-    url = git@github.com:elzr/vim-json.git
+    url = https://github.com/elzr/vim-json.git
 [submodule "vim/.vim/bundle/vim-corpus"]
     path = vim/.vim/bundle/vim-corpus
-    url = git@github.com:JamshedVesuna/vim-corpus.git
+    url = https://github.com/JamshedVesuna/vim-corpus.git
