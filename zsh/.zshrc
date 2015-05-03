@@ -51,6 +51,10 @@ function chpwd() {
     ls #-a
 }
 
+function count() {
+  ls -1 $1 | wc -l
+}
+
 # Extended glob includes regex
 setopt extendedglob
 
