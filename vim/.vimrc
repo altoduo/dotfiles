@@ -118,9 +118,10 @@ colorscheme default
 
 "Recognize files as other files
 au BufNewFile,BufRead *.carbon set filetype=groovy
-au BufNewFile,BufRead *.pl set filetype=prolog
-au BufNewFile,BufRead *.pdb set filetype=prolog
 au BufNewFile,BufRead *.md set filetype=markdown
+au BufNewFile,BufRead *.pdb set filetype=prolog
+au BufNewFile,BufRead *.pl set filetype=prolog
+au BufNewFile,BufRead *.stronglifts set filetype=json
 
 "Set colorcolumn at 80 chars for python files only
 autocmd BufNewFile,BufRead *.py, set cc=80
