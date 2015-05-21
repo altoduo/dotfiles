@@ -78,3 +78,10 @@ elif [ ! -f ~/.zshrc ]
     echo "source \$DOTFILES_PATH/zsh/.zshrc" > ~/.zshrc
 fi
 
+if [ -f ~/.tmux.conf ]
+  then
+    echo "source \$DOTFILES_PATH/tmux/.tmux.conf" >> ~/.tmux.conf
+elif [ ! -f ~/.tmux.conf ]
+  then
+    echo "source \$DOTFILES_PATH/tmux/.tmux.conf" > ~/.tmux.conf
+fi

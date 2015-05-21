@@ -38,8 +38,8 @@ set linebreak
 "Copy/Paste integration with system
 set clipboard=unnamed
 
-"F5 past toggle
-set pastetoggle=<F5>
+"<Leader>p past toggle
+set pastetoggle=<Leader>p
 
 "Automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
@@ -118,9 +118,10 @@ colorscheme default
 
 "Recognize files as other files
 au BufNewFile,BufRead *.carbon set filetype=groovy
-au BufNewFile,BufRead *.pl set filetype=prolog
-au BufNewFile,BufRead *.pdb set filetype=prolog
 au BufNewFile,BufRead *.md set filetype=markdown
+au BufNewFile,BufRead *.pdb set filetype=prolog
+au BufNewFile,BufRead *.pl set filetype=prolog
+au BufNewFile,BufRead *.stronglifts set filetype=json
 
 "Set colorcolumn at 80 chars for python files only
 autocmd BufNewFile,BufRead *.py, set cc=80
