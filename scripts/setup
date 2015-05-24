@@ -72,9 +72,11 @@ fi
 
 if [ -f ~/.zshrc ]
   then
+    echo "export DOTFILES_PATH=$($DOTDIR)" >> ~/.zshrc
     echo "source \$DOTFILES_PATH/zsh/.zshrc" >> ~/.zshrc
 elif [ ! -f ~/.zshrc ]
   then
+    echo "export DOTFILES_PATH=$($DOTDIR)" > ~/.zshrc
     echo "source \$DOTFILES_PATH/zsh/.zshrc" > ~/.zshrc
 fi
 
