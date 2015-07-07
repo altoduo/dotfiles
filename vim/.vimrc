@@ -169,6 +169,9 @@ nmap ++ vip++
 "Vim-json show quotes
 let g:vim_json_syntax_conceal = 0
 
+"Vim-markdown-preview option
+let vim_markdown_preview_github=1
+
 "=========================
 "       Functions
 "=========================
