@@ -174,13 +174,3 @@ launch() {
   # disown newly forked child
   disown
 }
-
-# execute the input as a python command
-pc() {
-  if [ $# != 1 ]; then
-    echo 'usage: pc [python operation]'
-    echo 'example: pc 1+2'
-    return 0
-  fi
-  python -c "print $1"
-}
