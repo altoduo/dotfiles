@@ -29,6 +29,8 @@ set autoindent
 set softtabstop=2
 filetype plugin indent on
 autocmd FileType make setlocal noexpandtab tabstop=4 shiftwidth=4
+autocmd Filetype go set nolist tw=120
+autocmd Filetype proto set nolist tw=80
 autocmd Filetype python set expandtab tabstop=4 shiftwidth=4
 
 "Text wrap
