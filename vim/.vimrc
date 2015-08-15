@@ -130,6 +130,9 @@ autocmd BufNewFile,BufRead *.py, set cc=80
 "   Plugins and Hotkeys
 "=========================
 
+"YouCompleteMe tab completion
+let g:ycm_complete_in_comments = 1
+
 "Run Pathogen Plugin Manager on Startup
 execute pathogen#infect()
 
@@ -176,7 +179,7 @@ let vim_markdown_preview_github=1
 "       Functions
 "=========================
 
-"Auto Complete"
+"Auto Complete
 function! Tab_Or_Complete()
   if col('.')>1 && strpart( getline('.'), col('.')-2, 3 ) =~ '^\w'
     return "\<C-N>"
@@ -192,7 +195,6 @@ map <F9> :resize -2<CR>
 map <F10> :resize +2<CR>
 
 set wildmenu
-inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
 
 "Requires pdflatex; Recommended BasicTeX
 function! Latex_To_PDF()

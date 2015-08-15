@@ -58,3 +58,6 @@
 [submodule "vim/.vim/bundle/vim-corpus"]
     path = vim/.vim/bundle/vim-corpus
     url = https://github.com/JamshedVesuna/vim-corpus.git
+[submodule "vim/.vim/bundle/YouCompleteMe"]
+	path = vim/.vim/bundle/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git
