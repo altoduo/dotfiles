@@ -29,8 +29,8 @@ set autoindent
 set softtabstop=2
 filetype plugin indent on
 autocmd FileType make setlocal noexpandtab tabstop=4 shiftwidth=4
-autocmd Filetype go set nolist tw=120
-autocmd Filetype proto set nolist tw=80
+autocmd Filetype go set nolist tw=120 cc=120
+autocmd Filetype proto set nolist tw=80 cc=80
 autocmd Filetype python set expandtab tabstop=4 shiftwidth=4
 
 "Text wrap
@@ -134,6 +134,7 @@ autocmd BufNewFile,BufRead *.py, set cc=80
 
 "YouCompleteMe tab completion
 let g:ycm_complete_in_comments = 1
+let g:ycm_auto_trigger = 1
 
 "Run Pathogen Plugin Manager on Startup
 execute pathogen#infect()
@@ -176,6 +177,7 @@ let g:vim_json_syntax_conceal = 0
 
 "Vim-markdown-preview option
 let vim_markdown_preview_github=1
+let vim_markdown_preview_toggle=0
 
 "=========================
 "       Functions
