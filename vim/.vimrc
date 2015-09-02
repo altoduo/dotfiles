@@ -29,7 +29,7 @@ set autoindent
 set softtabstop=2
 filetype plugin indent on
 autocmd FileType make setlocal noexpandtab tabstop=4 shiftwidth=4
-autocmd Filetype go set nolist tw=120 cc=120
+autocmd Filetype go set nolist tw=120 cc=100
 autocmd Filetype proto set nolist tw=80 cc=80
 autocmd Filetype python set expandtab tabstop=4 shiftwidth=4
 
@@ -166,6 +166,7 @@ set updatetime=100
 "Ctrlp
 let g:ctrlp_map = '<c-p>'
 nnoremap <C-i> :CtrlPTag<CR>
+nnoremap <C-m> :CtrlPMRU<CR>
 
 
 "VMath shortcut
