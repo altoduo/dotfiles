@@ -13,6 +13,7 @@ set number
 "Mappings
 nnoremap ; :
 nnoremap <Space> ;
+nnoremap q: :q
 
 "Filetype on
 filetype on
