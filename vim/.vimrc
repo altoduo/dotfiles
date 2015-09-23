@@ -7,7 +7,7 @@
 "         Misc.
 "=========================
 
-"Set line numbers"
+"Set line numbers
 set number
 
 "Mappings
@@ -76,7 +76,7 @@ map <C-L> <C-W>l<C-W>
 map <C-J> <C-W>j<C-W>
 map <C-K> <C-W>k<C-W>
 
-" Todo map
+"Todo map
 nnoremap <Leader>t :Todo<CR>
 
 "Put new buffers on the right of and below the current buffter
@@ -89,6 +89,9 @@ command! -range -nargs=0 D <line1>,<line2>d|norm ``
 "Map my mistakes to real things
 command! W w
 command! Q q
+
+"Format a json file neatly
+command! Jsonfmt %!python -m json.tool
 
 "Set the terminal's title when using vim
 set title
@@ -106,7 +109,7 @@ set autoread
 "         Colors
 "=========================
 
-"Set syntax highlighting on"
+"Set syntax highlighting on
 syntax on
 
 "Set search highlighting
