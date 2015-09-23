@@ -171,6 +171,7 @@ set updatetime=100
 let g:ctrlp_map = '<c-p>'
 nnoremap <C-i> :CtrlPTag<CR>
 nnoremap <C-m> :CtrlPMRU<CR>
+nnoremap <C-b> :CtrlPBuffer<Cr>
 
 
 "VMath shortcut
