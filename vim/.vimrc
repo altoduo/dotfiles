@@ -135,13 +135,13 @@ autocmd BufNewFile,BufRead *.py, set cc=80
 "=========================
 "   Plugins and Hotkeys
 "=========================
+"
+"Run Pathogen Plugin Manager on Startup
+execute pathogen#infect()
 
 "YouCompleteMe tab completion
 let g:ycm_complete_in_comments = 1
 let g:ycm_auto_trigger = 1
-
-"Run Pathogen Plugin Manager on Startup
-execute pathogen#infect()
 
 "Plugin Filetypes On
 filetype plugin on
@@ -168,10 +168,9 @@ let g:pymode_lint_write = 0
 set updatetime=100
 
 "Ctrlp
-let g:ctrlp_map = '<c-p>'
-nnoremap <C-i> :CtrlPTag<CR>
-nnoremap <C-m> :CtrlPMRU<CR>
 nnoremap <C-b> :CtrlPBuffer<Cr>
+nnoremap <C-i> :CtrlPTag<Cr>
+nnoremap <leader>m :CtrlPMRU<Cr>
 
 
 "VMath shortcut
@@ -231,3 +230,7 @@ set complete=.,t
 
 "Fixes O delay, see :set termcap
 set timeout timeoutlen=5000 ttimeoutlen=100
+
+"OS X only setting. Option j/k for faster jumps
+nnoremap ∆ 10j
+nnoremap ˚ 10k
