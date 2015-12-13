@@ -59,5 +59,8 @@
     path = vim/.vim/bundle/vim-corpus
     url = https://github.com/JamshedVesuna/vim-corpus.git
 [submodule "vim/.vim/bundle/YouCompleteMe"]
-	path = vim/.vim/bundle/YouCompleteMe
-	url = https://github.com/Valloric/YouCompleteMe.git
+    path = vim/.vim/bundle/YouCompleteMe
+    url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "vim/.vim/bundle/vim-visual-star-search"]
+    path = vim/.vim/bundle/vim-visual-star-search
+    url = https://github.com/nelstrom/vim-visual-star-search.git
