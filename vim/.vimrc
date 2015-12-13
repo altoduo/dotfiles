@@ -30,9 +30,10 @@ set autoindent
 set softtabstop=2
 filetype plugin indent on
 autocmd FileType make setlocal noexpandtab tabstop=4 shiftwidth=4
+autocmd FileType tex setlocal textwidth=80
 autocmd Filetype go set nolist tw=120 cc=100
 autocmd Filetype proto set nolist tw=80 cc=80
-autocmd Filetype python set expandtab tabstop=4 shiftwidth=4
+autocmd Filetype python set expandtab tabstop=4 shiftwidth=4 cc=80
 
 "Text wrap
 set wrap
@@ -124,13 +125,11 @@ colorscheme default
 
 "Recognize files as other files
 au BufNewFile,BufRead *.carbon set filetype=groovy
+au BufNewFile,BufRead *.har set filetype=json
 au BufNewFile,BufRead *.md set filetype=markdown
 au BufNewFile,BufRead *.pdb set filetype=prolog
 au BufNewFile,BufRead *.pl set filetype=prolog
 au BufNewFile,BufRead *.stronglifts set filetype=json
-
-"Set colorcolumn at 80 chars for python files only
-autocmd BufNewFile,BufRead *.py, set cc=80
 
 "=========================
 "   Plugins and Hotkeys
@@ -142,6 +141,9 @@ execute pathogen#infect()
 "YouCompleteMe tab completion
 let g:ycm_complete_in_comments = 1
 let g:ycm_auto_trigger = 1
+let g:ycm_add_preview_to_completeopt = 0
+let g:ycm_autoclose_preview_window_after_completion = 0
+set completeopt-=preview
 
 "Plugin Filetypes On
 filetype plugin on
@@ -171,7 +173,7 @@ set updatetime=100
 nnoremap <C-b> :CtrlPBuffer<Cr>
 nnoremap <C-i> :CtrlPTag<Cr>
 nnoremap <leader>m :CtrlPMRU<Cr>
-
+let g:ctrlp_clear_cache_on_exit = 0
 
 "VMath shortcut
 vmap <expr> ++ VMATH_YankAndAnalyse()
@@ -215,7 +217,6 @@ function! Latex_To_PDF()
 endfunction
 
 autocmd Filetype tex map <buffer> <C-p> :call Latex_To_PDF()<CR>
-
 
 "=========================
 "       Experimental
