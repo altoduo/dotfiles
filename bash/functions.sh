@@ -174,3 +174,14 @@ launch() {
   # disown newly forked child
   disown
 }
+
+# Appends your local public ssh key onto the remote server's authorized keys
+# for passwordless ssh
+keyex() {
+  if [ $# != 1 ]; then
+    echo 'usage: keyex [user@host]'
+    echo 'example: keyex jamshed@192.168.1.2'
+    return 0
+  fi
+  cat ~/.ssh/id_rsa.pub | ssh $1 'cat >> .ssh/authorized_keys'
+}
