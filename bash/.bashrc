@@ -147,6 +147,16 @@ if [ "$OS" = "Darwin" ]; then
     alias updatedb="$FINDUTIL_DIR/gupdatedb"
 fi
 
+# Rename the current tab
+function tabname {
+  printf "\e]1;$1\a"
+}
+
+# Rename the current window
+function winname {
+  printf "\e]2;$1\a"
+}
+
 #################
 #    History    #
 #################
