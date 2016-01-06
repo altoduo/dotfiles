@@ -1,0 +1,27 @@
+---
+- name: Setup directories
+  file: path={{ home }}/{{ item }} state=directory
+  with_items:
+    - scripts
+
+- name: Download dotfiles
+  git: repo=https://github.com/altoduo/dotfiles.git
+       dest={{ home }}/scripts/dotfiles
+       # track_submodules=True  # Supported by ansible >1.8
+
+- name: Dotfile sourcing
+  lineinfile: dest={{ home }}/{{ item.location }} line={{ item.line }} create=true
+  with_items:
+    - { location: '.bashrc ',      line: '"export DOTFILES_PATH={{ home }}/scripts/dotfiles"' }
+    - { location: '.bashrc ',      line: '"source \$DOTFILES_PATH/bash/.bashrc"' }
+    - { location: '.bash_profile', line: '"source \$DOTFILES_PATH/bash/.bash_profile"' }
+    - { location: '.vimrc',        line: '"source \$DOTFILES_PATH/vim/.vimrc"' }
+    - { location: '.gvimrc',       line: '"source \$DOTFILES_PATH/vim/.gvimrc"' }
+    - { location: '.gitconfig',    line: '"[include]"' }
+    - { location: '.gitconfig',    line: '"    path = \$DOTFILES_PATH/git/.gitconfig"' }
+    - { location: '.tmux.conf',    line: '"source \$DOTFILES_PATH/tmux/.tmux.conf"' }
+
+- name: Dotfile symlink
+  file: src={{ item.src }} dest={{ item.dest }} state=link
+  with_items:
+    - { src: '{{ home }}/scripts/dotfiles/vim/.vim', dest: '"{{ home }}/.vim"' }
