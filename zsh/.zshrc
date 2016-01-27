@@ -8,7 +8,6 @@
 # Let's ease into the transition
 {source ~/.bashrc 2>&1} > /dev/null
 PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD/$HOME/~}\007"'
-unalias cd
 alias k="cd .."
 
 # Autotab
