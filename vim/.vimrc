@@ -106,6 +106,9 @@ set path=.,,**
 "Auto buffer reads
 set autoread
 
+"Autoinsert commented 'TODO($USER): ' via <leader>T
+map <leader>T OTODO(<esc>:r! echo $USER<CR>kJxA): <esc><c-c>f:la
+
 "=========================
 "         Colors
 "=========================
