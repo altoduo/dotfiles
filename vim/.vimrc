@@ -218,6 +218,13 @@ endfunction
 
 autocmd Filetype tex map <buffer> <C-p> :call Latex_To_PDF()<CR>
 
+function! Import_IPDB()
+  :normal Oimport ipdb; ipdb.set_trace()
+  :normal j
+endfunction
+
+autocmd Filetype python map <buffer> <leader>d :call Import_IPDB()<CR>
+
 "=========================
 "       Experimental
 "=========================
