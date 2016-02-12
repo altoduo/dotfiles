@@ -109,6 +109,9 @@ set autoread
 "Autoinsert commented 'TODO($USER): ' via <leader>T
 map <leader>T OTODO(<esc>:r! echo $USER<CR>kJxA): <esc><c-c>f:la
 
+"Autoinsert 'import ipdb; ipdb.set_trace()' in python files with <leader>d
+autocmd Filetype python nnoremap <buffer> <leader>d Oimport ipdb; ipdb.set_trace()<esc>j
+
 "=========================
 "         Colors
 "=========================
@@ -220,13 +223,6 @@ function! Latex_To_PDF()
 endfunction
 
 autocmd Filetype tex map <buffer> <C-p> :call Latex_To_PDF()<CR>
-
-function! Import_IPDB()
-  :normal Oimport ipdb; ipdb.set_trace()
-  :normal j
-endfunction
-
-autocmd Filetype python map <buffer> <leader>d :call Import_IPDB()<CR>
 
 "=========================
 "       Experimental
