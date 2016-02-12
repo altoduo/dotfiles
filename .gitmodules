@@ -64,3 +64,6 @@
 [submodule "vim/.vim/bundle/vim-visual-star-search"]
     path = vim/.vim/bundle/vim-visual-star-search
     url = https://github.com/nelstrom/vim-visual-star-search.git
+[submodule "vim/.vim/bundle/vim-easy-align"]
+    path = vim/.vim/bundle/vim-easy-align
+    url = git@github.com:junegunn/vim-easy-align.git
