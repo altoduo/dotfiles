@@ -192,6 +192,12 @@ let g:vim_json_syntax_conceal = 0
 let vim_markdown_preview_github=1
 let vim_markdown_preview_toggle=0
 
+"Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+"Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+
 "=========================
 "       Functions
 "=========================
