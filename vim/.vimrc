@@ -107,10 +107,10 @@ set path=.,,**
 set autoread
 
 "Autoinsert commented 'TODO($USER): ' via <leader>T
-map <leader>T OTODO(<esc>:r! echo $USER<CR>kJxA): <esc><c-c>f:la
+map <leader>T OTODO(<esc>:r! echo $USER<CR>kJxA): .<esc><c-c>^f:la
 
 "Autoinsert 'import ipdb; ipdb.set_trace()' in python files with <leader>d
-autocmd Filetype python nnoremap <buffer> <leader>d Oimport ipdb; ipdb.set_trace()<esc>j
+autocmd Filetype python nnoremap <buffer> <leader>d Oimport ipdb; ipdb.set_trace(context=10)<esc>j
 
 "=========================
 "         Colors
