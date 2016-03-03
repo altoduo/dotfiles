@@ -33,7 +33,7 @@ autocmd FileType make setlocal noexpandtab tabstop=4 shiftwidth=4
 autocmd FileType tex setlocal textwidth=80
 autocmd Filetype go set nolist tw=120 cc=100
 autocmd Filetype proto set nolist tw=80 cc=80
-autocmd Filetype python set expandtab tabstop=4 shiftwidth=4 cc=80
+autocmd Filetype python set expandtab tabstop=4 shiftwidth=4 cc=80 tw=80
 
 "Text wrap
 set wrap
