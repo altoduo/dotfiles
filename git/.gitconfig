@@ -13,7 +13,7 @@
     ci = commit
     st = status --ignore-submodules
     co = checkout
-    br = branch --color -av
+    br = branch --color -avv
     rb = rebase
     ls = log --stat
     staged = diff --cached --color
