@@ -111,7 +111,7 @@ set autoread
 map <leader>T OTODO(<esc>:r! echo $USER<CR>kJxA): .<esc><c-c>^f:la
 
 "Autoinsert 'import ipdb; ipdb.set_trace()' in python files with <leader>d
-autocmd Filetype python nnoremap <buffer> <leader>d Oimport ipdb; ipdb.set_trace(context=10)<esc>j
+autocmd Filetype python nnoremap <buffer> <leader>d Oimport ipdb; ipdb.set_trace(context=20)<esc>j
 
 "=========================
 "         Colors
@@ -181,6 +181,7 @@ nnoremap <C-b> :CtrlPBuffer<Cr>
 nnoremap <C-i> :CtrlPTag<Cr>
 nnoremap <leader>m :CtrlPMRU<Cr>
 let g:ctrlp_clear_cache_on_exit = 0
+let g:ctrlp_max_files=0
 
 "VMath shortcut
 vmap <expr> ++ VMATH_YankAndAnalyse()
