@@ -67,3 +67,9 @@
 [submodule "vim/.vim/bundle/vim-easy-align"]
     path = vim/.vim/bundle/vim-easy-align
     url = git@github.com:junegunn/vim-easy-align.git
+[submodule "vim/.vim/bundle/vim-session"]
+	path = vim/.vim/bundle/vim-session
+	url = https://github.com/xolox/vim-session.git
+[submodule "vim/.vim/bundle/vim-misc"]
+	path = vim/.vim/bundle/vim-misc
+	url = https://github.com/xolox/vim-misc.git

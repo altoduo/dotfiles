@@ -63,3 +63,9 @@ setopt extendedglob
 
 bindkey    "^[[3~"          delete-char
 bindkey    "^[3;5~"         delete-char
+
+#######
+# VIM #
+#######
+# Start MacVim with the default session or load options.
+alias mvs="mvim -c ':OpenSession'"

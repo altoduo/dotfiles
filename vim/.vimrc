@@ -200,6 +200,11 @@ xmap ga <Plug>(EasyAlign)
 "Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
 
+"Save sessions in the vim session folder
+let g:session_directory="~/.vim/sessions/"
+let g:session_autosave="no"
+let g:session_autoload="no"
+
 "=========================
 "       Functions
 "=========================
