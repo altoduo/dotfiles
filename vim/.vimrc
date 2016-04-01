@@ -111,7 +111,11 @@ set autoread
 map <leader>T OTODO(<esc>:r! echo $USER<CR>kJxA): .<esc><c-c>^f:la
 
 "Autoinsert 'import ipdb; ipdb.set_trace()' in python files with <leader>d
-autocmd Filetype python nnoremap <buffer> <leader>d Oimport ipdb; ipdb.set_trace(context=20)<esc>j
+autocmd Filetype python nnoremap <buffer>
+  \ <leader>d Oimport ipdb; ipdb.set_trace(context=20)<esc>j
+
+autocmd Filetype python nnoremap <buffer>
+  \ <leader>D Oimport ipdb;<esc>owith ipdb.launch_ipdb_on_exception():<esc>j
 
 "=========================
 "         Colors
