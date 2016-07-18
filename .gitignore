@@ -31,3 +31,6 @@ altovars.config
 
 # Stored API Passwords and Secrets
 *.cronos
+
+# OS X
+.DS_Store
