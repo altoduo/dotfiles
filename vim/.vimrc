@@ -206,10 +206,18 @@ xmap ga <Plug>(EasyAlign)
 "Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
 
+"Ack
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+
 "Save sessions in the vim session folder
 let g:session_directory="~/.vim/sessions/"
 let g:session_autosave="no"
 let g:session_autoload="no"
+
+"Casetrate
+let g:casetrate_leader="\C"
 
 "=========================
 "       Functions

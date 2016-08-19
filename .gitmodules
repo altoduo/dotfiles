@@ -73,3 +73,6 @@
 [submodule "vim/.vim/bundle/ack"]
   path = vim/.vim/bundle/ack
   url = https://github.com/mileszs/ack.vim.git
+[submodule "vim/.vim/bundle/vim-casetrate"]
+  path = vim/.vim/bundle/vim-casetrate
+  url = https://github.com/idanarye/vim-casetrate.git
