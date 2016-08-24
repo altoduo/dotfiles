@@ -184,7 +184,6 @@ set updatetime=100
 
 "Ctrlp
 nnoremap <C-b> :CtrlPBuffer<Cr>
-nnoremap <C-i> :CtrlPTag<Cr>
 nnoremap <leader>m :CtrlPMRU<Cr>
 let g:ctrlp_clear_cache_on_exit = 0
 let g:ctrlp_max_files=0
@@ -215,9 +214,6 @@ endif
 let g:session_directory="~/.vim/sessions/"
 let g:session_autosave="no"
 let g:session_autoload="no"
-
-"Casetrate
-let g:casetrate_leader="\C"
 
 "=========================
 "       Functions
