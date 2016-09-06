@@ -36,6 +36,7 @@ autocmd Filetype proto set nolist tw=80 cc=80
 autocmd Filetype python set expandtab tabstop=4 shiftwidth=4 cc=80 tw=79
 autocmd FileType gitcommit setlocal spell cc=80 tw=79
 autocmd FileType markdown set spell tw=80 cc=80 sw=2
+autocmd FileType rst set spell tw=80 cc=80 sw=2
 
 "Text wrap
 set wrap
