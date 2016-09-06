@@ -76,3 +76,6 @@
 [submodule "vim/.vim/bundle/vim-casetrate"]
   path = vim/.vim/bundle/vim-casetrate
   url = https://github.com/idanarye/vim-casetrate.git
+[submodule "vim/.vim/bundle/vim-rst-preview"]
+  path = vim/.vim/bundle/vim-rst-preview
+  url = git@github.com:JamshedVesuna/vim-rst-preview.git
