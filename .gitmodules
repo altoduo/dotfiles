@@ -79,3 +79,6 @@
 [submodule "vim/.vim/bundle/vim-rst-preview"]
   path = vim/.vim/bundle/vim-rst-preview
   url = git@github.com:JamshedVesuna/vim-rst-preview.git
+[submodule "vim/.vim/bundle/lexima"]
+  path = vim/.vim/bundle/lexima
+  url = git@github.com:cohama/lexima.vim.git
