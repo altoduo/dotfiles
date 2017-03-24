@@ -14,6 +14,7 @@ set number
 nnoremap ; :
 nnoremap <Space> ;
 nnoremap q: :q
+nnoremap Q q
 
 "Filetype on
 filetype on
@@ -33,10 +34,11 @@ autocmd FileType make setlocal noexpandtab tabstop=4 shiftwidth=4
 autocmd FileType tex setlocal textwidth=80
 autocmd Filetype go set nolist tw=120 cc=100
 autocmd Filetype proto set nolist tw=80 cc=80
-autocmd Filetype python set expandtab tabstop=4 shiftwidth=4 cc=80 tw=79
+autocmd Filetype python set expandtab tabstop=4 shiftwidth=4 cc=80 tw=80 indentexpr-=:
 autocmd FileType gitcommit setlocal spell cc=80 tw=79
 autocmd FileType markdown set spell tw=80 cc=80 sw=2
 autocmd FileType rst set spell tw=80 cc=80 sw=2
+
 
 "Text wrap
 set wrap
@@ -144,6 +146,7 @@ au BufNewFile,BufRead *.pdb set filetype=prolog
 au BufNewFile,BufRead *.pl set filetype=prolog
 au BufNewFile,BufRead *.stronglifts set filetype=json
 au BufNewFile,BufRead new-commit set filetype=gitcommit
+au BufNewFile,BufRead *.sls set filetype=yaml
 
 "=========================
 "   Plugins and Hotkeys
